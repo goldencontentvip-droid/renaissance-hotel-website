@@ -1,25 +1,45 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import RoomsSection from '@/components/RoomsSection';
+import ToursSection from '@/components/ToursSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import LocationSection from '@/components/LocationSection';
+import Footer from '@/components/Footer';
 
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * Hotel La Renaissance - Main Landing Page
+ *
+ * Design Philosophy: Luxury Moroccan Hospitality
+ * - Warm earthy color palette (terracotta, beige, warm brown)
+ * - Elegant serif typography for headings
+ * - Generous whitespace and refined spacing
+ * - Smooth animations and transitions
+ * - High-quality imagery and professional presentation
  */
-export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
 
+export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
+      <Header />
+
+      <main className="flex-1">
+        {/* Hero Section with Hotel Courtyard Background */}
+        <Hero backgroundImage="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80" />
+
+        {/* Rooms Section */}
+        <RoomsSection />
+
+        {/* Tours Agency Section */}
+        <ToursSection />
+
+        {/* Testimonials Section */}
+        <TestimonialsSection />
+
+        {/* Location & Maps Section */}
+        <LocationSection />
       </main>
+
+      <Footer />
     </div>
   );
 }
