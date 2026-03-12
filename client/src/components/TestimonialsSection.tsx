@@ -6,6 +6,8 @@ import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 export default function TestimonialsSection() {
   const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -22,6 +24,24 @@ export default function TestimonialsSection() {
     setCurrentIndex((prev) => (prev + 1) % TESTIMONIALS.length);
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    setTouchEnd(e.changedTouches[0].clientX);
+    handleSwipe();
+  };
+
+  const handleSwipe = () => {
+    if (touchStart - touchEnd > 50) {
+      goToNext();
+    }
+    if (touchStart - touchEnd < -50) {
+      goToPrevious();
+    }
+  };
+
   return (
     <section id="testimonials" className="section-padding bg-secondary/30">
       <div className="container">
@@ -29,7 +49,11 @@ export default function TestimonialsSection() {
 
         <div className="max-w-4xl mx-auto">
           {/* Testimonial Carousel */}
-          <div className="relative">
+          <div
+            className="relative cursor-grab active:cursor-grabbing"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
             <div className="card-luxury p-8 md:p-12 min-h-64 flex flex-col justify-between">
               {/* Stars */}
               <div className="flex gap-1 mb-4">

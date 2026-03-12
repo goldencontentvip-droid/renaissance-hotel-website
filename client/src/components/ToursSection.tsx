@@ -84,7 +84,7 @@ export default function ToursSection() {
         </div>
 
         {/* Agency Info & CTA */}
-        <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
+        <div className="bg-white/95 rounded-2xl p-8 md:p-12 shadow-sm border border-border/20 backdrop-blur-sm">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-3xl font-serif font-bold text-foreground mb-4">
@@ -137,7 +137,7 @@ export default function ToursSection() {
                 href={TOUR_AGENCY.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-6 bg-secondary rounded-lg hover:bg-secondary/80 transition-colors text-center"
+                className="p-6 bg-accent/10 rounded-lg hover:bg-accent/20 transition-colors text-center border border-accent/20"
               >
                 <p className="text-sm text-muted-foreground font-sans mb-2">Instagram</p>
                 <p className="text-foreground font-serif font-semibold">@exploretata</p>
@@ -146,7 +146,7 @@ export default function ToursSection() {
                 href={TOUR_AGENCY.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-6 bg-secondary rounded-lg hover:bg-secondary/80 transition-colors text-center"
+                className="p-6 bg-accent/10 rounded-lg hover:bg-accent/20 transition-colors text-center border border-accent/20"
               >
                 <p className="text-sm text-muted-foreground font-sans mb-2">Facebook</p>
                 <p className="text-foreground font-serif font-semibold">TATA EXPLORE</p>
