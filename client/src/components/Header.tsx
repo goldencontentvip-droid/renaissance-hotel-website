@@ -84,7 +84,7 @@ export default function Header() {
           {/* Book Button */}
           <Button
             onClick={handleWhatsAppClick}
-            className="hidden sm:inline-flex px-4 md:px-8 py-2.5 bg-white text-foreground hover:bg-white/90 font-serif font-semibold rounded-full text-sm md:text-base shadow-lg hover:shadow-xl transition-all duration-200 items-center gap-2"
+            className="hidden sm:inline-flex px-4 md:px-8 py-2.5 bg-white text-black hover:bg-white/90 font-serif font-semibold rounded-full text-sm md:text-base shadow-lg hover:shadow-xl transition-all duration-200 items-center gap-2"
           >
             <MessageCircle size={18} />
             <span className="hidden md:inline">{t('nav.book')}</span>
@@ -137,7 +137,7 @@ export default function Header() {
                 handleWhatsAppClick();
                 setMobileMenuOpen(false);
               }}
-              className="w-full bg-white hover:bg-white/90 text-foreground font-serif mt-2 flex items-center justify-center gap-2"
+              className="w-full bg-white hover:bg-white/90 text-black font-serif mt-2 flex items-center justify-center gap-2"
             >
               <MessageCircle size={18} />
               {t('nav.book')}

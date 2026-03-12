@@ -84,13 +84,13 @@ export default function ToursSection() {
         </div>
 
         {/* Agency Info & CTA */}
-        <div className="bg-white/95 rounded-2xl p-8 md:p-12 shadow-sm border border-border/20 backdrop-blur-sm">
+        <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-border/20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-3xl font-serif font-bold text-foreground mb-4">
+              <h3 className="text-3xl font-serif font-bold text-black mb-4">
                 {TOUR_AGENCY.name}
               </h3>
-              <p className="text-foreground/80 font-sans mb-6 leading-relaxed">
+              <p className="text-black/80 font-sans mb-6 leading-relaxed">
                 {language === 'ar'
                   ? 'استكشف جمال تاتا الطبيعي والثقافي مع وكالة تاتا إكسبلور. نحن نقدم تجارب فريدة لا تُنسى في قلب الصحراء المغربية.'
                   : language === 'fr'
@@ -100,7 +100,7 @@ export default function ToursSection() {
 
               <div className="space-y-3 mb-6">
                 <div>
-                  <p className="text-sm text-muted-foreground font-sans">
+                  <p className="text-sm text-black/60 font-sans">
                     {language === 'ar' ? 'البريد الإلكتروني' : language === 'fr' ? 'Email' : 'Email'}
                   </p>
                   <a
@@ -111,7 +111,7 @@ export default function ToursSection() {
                   </a>
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground font-sans">
+                  <p className="text-sm text-black/60 font-sans">
                     {language === 'ar' ? 'الهاتف' : language === 'fr' ? 'Téléphone' : 'Phone'}
                   </p>
                   <a
@@ -139,8 +139,8 @@ export default function ToursSection() {
                 rel="noopener noreferrer"
                 className="p-6 bg-accent/10 rounded-lg hover:bg-accent/20 transition-colors text-center border border-accent/20"
               >
-                <p className="text-sm text-muted-foreground font-sans mb-2">Instagram</p>
-                <p className="text-foreground font-serif font-semibold">@exploretata</p>
+                <p className="text-sm text-black/60 font-sans mb-2">Instagram</p>
+                <p className="text-black font-serif font-semibold">@exploretata</p>
               </a>
               <a
                 href={TOUR_AGENCY.facebook}
@@ -148,8 +148,8 @@ export default function ToursSection() {
                 rel="noopener noreferrer"
                 className="p-6 bg-accent/10 rounded-lg hover:bg-accent/20 transition-colors text-center border border-accent/20"
               >
-                <p className="text-sm text-muted-foreground font-sans mb-2">Facebook</p>
-                <p className="text-foreground font-serif font-semibold">TATA EXPLORE</p>
+                <p className="text-sm text-black/60 font-sans mb-2">Facebook</p>
+                <p className="text-black font-serif font-semibold">TATA EXPLORE</p>
               </a>
             </div>
           </div>

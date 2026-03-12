@@ -47,10 +47,10 @@ export default function TestimonialsSection() {
       <div className="container">
         <h2 className="section-title">{t('testimonials.title')}</h2>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto overflow-hidden">
           {/* Testimonial Carousel */}
           <div
-            className="relative cursor-grab active:cursor-grabbing"
+            className="relative cursor-grab active:cursor-grabbing overflow-hidden"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
