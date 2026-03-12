@@ -41,12 +41,13 @@ export default function RoomsSection() {
               className="card-luxury overflow-hidden group cursor-pointer transition-all duration-300 hover:scale-105"
               onClick={() => setSelectedRoom(room.id)}
             >
-              {/* Room Image Placeholder */}
+              {/* Room Image */}
               <div className="w-full h-64 bg-gradient-to-br from-secondary to-secondary/60 flex items-center justify-center overflow-hidden relative">
-                <div className="text-center text-muted-foreground">
-                  <div className="text-5xl mb-2">🛏️</div>
-                  <p className="text-sm font-sans">{getRoomTitle(room)}</p>
-                </div>
+                <img
+                  src={room.id === 'double' ? 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop' : room.id === 'suite' ? 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop' : 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop'}
+                  alt={getRoomTitle(room)}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
               </div>
 
               {/* Room Info */}

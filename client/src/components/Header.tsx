@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
 
 export default function Header() {
   const { language, setLanguage, t } = useLanguage();
@@ -82,8 +82,9 @@ export default function Header() {
           {/* Book Button */}
           <Button
             onClick={handleWhatsAppClick}
-            className="hidden sm:inline-flex bg-accent hover:bg-accent/90 text-accent-foreground font-serif"
+            className="hidden sm:inline-flex px-3 md:px-6 py-2 bg-accent text-accent-foreground hover:bg-accent/90 font-serif font-semibold rounded-full text-sm md:text-base shadow-md hover:shadow-lg transition-all duration-200"
           >
+            <MessageCircle size={16} className="mr-1 md:mr-2" />
             {t('nav.book')}
           </Button>
 
@@ -119,13 +120,13 @@ export default function Header() {
                     setLanguage(lang);
                     setMobileMenuOpen(false);
                   }}
-                  className={`text-xs font-semibold px-3 py-2 rounded transition-colors flex-1 ${
+                  className={`text-xs font-semibold px-3 py-2 rounded-md transition-colors flex-1 ${
                     language === lang
-                      ? 'bg-accent text-accent-foreground'
+                      ? 'bg-accent text-accent-foreground shadow-md'
                       : 'bg-secondary text-foreground hover:bg-secondary/80'
                   }`}
                 >
-                  {lang.toUpperCase()}
+                  {lang === 'fr' ? '🇫🇷' : lang === 'ar' ? '🇸🇦' : lang === 'en' ? '🇬🇧' : lang === 'es' ? '🇪🇸' : '🇮🇹'}
                 </button>
               ))}
             </div>

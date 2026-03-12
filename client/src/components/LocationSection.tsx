@@ -17,13 +17,17 @@ export default function LocationSection() {
         <h2 className="section-title">{t('location.title')}</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
-          {/* Map Placeholder */}
-          <div className="w-full h-96 lg:h-full rounded-2xl shadow-lg overflow-hidden border border-border bg-gradient-to-br from-secondary to-secondary/60 flex items-center justify-center">
-            <div className="text-center text-muted-foreground">
-              <MapPin size={48} className="mx-auto mb-3 text-accent" />
-              <p className="font-serif font-semibold text-lg">Tata, Morocco</p>
-              <p className="text-sm font-sans mt-2">Interactive Map</p>
-            </div>
+          {/* Google Maps */}
+          <div className="w-full h-96 lg:h-full rounded-2xl shadow-lg overflow-hidden border border-border">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.8234567890123!2d-5.9833333!3d29.9166667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd9f3c8d8d8d8d8d9%3A0x1234567890abcdef!2sTata%2C%20Morocco!5e0!3m2!1sen!2sma!4v1234567890"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
 
           {/* Info */}
