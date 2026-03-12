@@ -21,9 +21,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
-                <span className="text-foreground font-serif font-bold text-lg">LR</span>
-              </div>
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/1000149357_53ec8863.webp"
+                alt="La Renaissance Logo"
+                className="w-10 h-10 object-contain"
+              />
               <div>
                 <h3 className="text-lg font-serif font-bold text-background">La Renaissance</h3>
                 <p className="text-xs text-background/80">Hotel & Restaurant</p>
