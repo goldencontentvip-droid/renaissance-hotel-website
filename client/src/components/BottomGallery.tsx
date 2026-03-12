@@ -10,52 +10,52 @@ interface GalleryImage {
 const GALLERY_IMAGES: GalleryImage[] = [
   {
     id: '1',
-    url: 'https://drive.google.com/uc?export=view&id=14FNnfPuJVTakBC9rrCDbKkqINOyb4iI7',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/optimized_image_14FNnfPuJVTakBC9rrCDbKkqINOyb4iI7_8764431f.jpg',
     title: 'Hotel Courtyard',
   },
   {
     id: '2',
-    url: 'https://drive.google.com/uc?export=view&id=1xJYAuWmJE9sH6_CZmWpO6r9_ht6-QX7U',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/optimized_image_1xJYAuWmJE9sH6_CZmWpO6r9_ht6-QX7U_cc8b8c67.jpg',
     title: 'Desert Landscape',
   },
   {
     id: '3',
-    url: 'https://drive.google.com/uc?export=view&id=1q-EfvFBrqnLQMZvxbpqEFNYZOaMHDVEv',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/optimized_image_1q-EfvFBrqnLQMZvxbpqEFNYZOaMHDVEv_a8c7c9e8.jpg',
     title: 'Hotel Interior',
   },
   {
     id: '4',
-    url: 'https://drive.google.com/uc?export=view&id=1qV6Gi6tLgGs6Vy4j7e4V9aDyDkvJgHSP',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/optimized_image_1qV6Gi6tLgGs6Vy4j7e4V9aDyDkvJgHSP_070905fe.jpg',
     title: 'Moroccan Architecture',
   },
   {
     id: '5',
-    url: 'https://drive.google.com/uc?export=view&id=1sMcrfAy80ubQ7rjdTS1-pZqIqq3olZB9',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/optimized_image_1sMcrfAy80ubQ7rjdTS1-pZqIqq3olZB9_5ee687eb.jpg',
     title: 'Dining Experience',
   },
   {
     id: '6',
-    url: 'https://drive.google.com/uc?export=view&id=1AoGAqL4D_CidfucmY3L8T78Qgupt6JxE',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/optimized_image_1AoGAqL4D_CidfucmY3L8T78Qgupt6JxE_c79ba26a.jpg',
     title: 'Guest Activities',
   },
   {
     id: '7',
-    url: 'https://drive.google.com/uc?export=view&id=1utbL1vhJd_UF0s9qO6B6slpTpYXHQhY7',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/optimized_image_1utbL1vhJd_UF0s9qO6B6slpTpYXHQhY7_97a45ed4.jpg',
     title: 'Hotel Amenities',
   },
   {
     id: '8',
-    url: 'https://drive.google.com/uc?export=view&id=1HrfscEdf5PKGLrdXfa-OeHAZstxS16rQ',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/optimized_image_1HrfscEdf5PKGLrdXfa-OeHAZstxS16rQ_6ad77423.jpg',
     title: 'Sunset View',
   },
   {
     id: '9',
-    url: 'https://drive.google.com/uc?export=view&id=1S3aDlxbmBUuc5XXqARonuH2S1Fj_YReI',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/optimized_image_1S3aDlxbmBUuc5XXqARonuH2S1Fj_YReI_c12097f5.jpg',
     title: 'Guest Gathering',
   },
   {
     id: '10',
-    url: 'https://drive.google.com/uc?export=view&id=18qPMlRsjTq-IqIMs6DGagNSUXA4EEsyE',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/optimized_image_18qPMlRsjTq-IqIMs6DGagNSUXA4EEsyE_7508fb74.jpg',
     title: 'Scenic View',
   },
 ];
