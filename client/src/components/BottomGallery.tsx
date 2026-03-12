@@ -10,33 +10,43 @@ interface GalleryImage {
 const GALLERY_IMAGES: GalleryImage[] = [
   {
     id: '1',
-    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-courtyard-YwayyvE2FwZHvWGXUURXu4.webp',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-courtyard_6eb0c4d0.jpg',
     title: 'Hotel Courtyard',
   },
   {
     id: '2',
-    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-bedroom-8f8ZjZBdusaLPEUK72kkyk.webp',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-bedroom_16db84fc.jpg',
     title: 'Bedroom Suite',
   },
   {
     id: '3',
-    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-desert-2VNtr4a5vo8aSSRRetXNrf.webp',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-desert_daabdf5e.jpg',
     title: 'Desert Landscape',
   },
   {
     id: '4',
-    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-restaurant-SsVKQmP9qYfn6VaxrmNstG.webp',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-restaurant_68122239.jpg',
     title: 'Moroccan Restaurant',
   },
   {
     id: '5',
-    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-courtyard-YwayyvE2FwZHvWGXUURXu4.webp',
-    title: 'Evening Ambiance',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-dining_30a5841a.jpg',
+    title: 'Gourmet Dining',
   },
   {
     id: '6',
-    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-desert-2VNtr4a5vo8aSSRRetXNrf.webp',
-    title: 'Desert Adventure',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-pool_483e781d.jpg',
+    title: 'Relaxation Area',
+  },
+  {
+    id: '7',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-kasbah_0bba9e74.jpg',
+    title: 'Moroccan Kasbah',
+  },
+  {
+    id: '8',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-market_e970135d.jpg',
+    title: 'Local Market',
   },
 ];
 

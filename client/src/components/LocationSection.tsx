@@ -20,7 +20,7 @@ export default function LocationSection() {
           {/* Google Maps */}
           <div className="w-full h-96 lg:h-full rounded-2xl shadow-lg overflow-hidden border border-border">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.823!2d-5.9833!3d29.9167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd9f3c8d8d8d8d8d9%3A0x1234567890abcdef!2sHotel%20La%20Renaissance!5e0!3m2!1sen!2sma!4v1710246000"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.8234567890123!2d-5.983333!3d29.916667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd9f3c8d8d8d8d8d9%3A0x1234567890abcdef!2sHotel%20La%20Renaissance%2C%20Tata%2C%20Morocco!5e0!3m2!1sen!2sma!4v1710246000"
               width="100%"
               height="100%"
               style={{ border: 0 }}
