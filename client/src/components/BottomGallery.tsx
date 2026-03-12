@@ -10,43 +10,53 @@ interface GalleryImage {
 const GALLERY_IMAGES: GalleryImage[] = [
   {
     id: '1',
-    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-courtyard_6eb0c4d0.jpg',
+    url: 'https://drive.google.com/uc?export=view&id=14FNnfPuJVTakBC9rrCDbKkqINOyb4iI7',
     title: 'Hotel Courtyard',
   },
   {
     id: '2',
-    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-bedroom_16db84fc.jpg',
-    title: 'Bedroom Suite',
-  },
-  {
-    id: '3',
-    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-desert_daabdf5e.jpg',
+    url: 'https://drive.google.com/uc?export=view&id=1xJYAuWmJE9sH6_CZmWpO6r9_ht6-QX7U',
     title: 'Desert Landscape',
   },
   {
+    id: '3',
+    url: 'https://drive.google.com/uc?export=view&id=1q-EfvFBrqnLQMZvxbpqEFNYZOaMHDVEv',
+    title: 'Hotel Interior',
+  },
+  {
     id: '4',
-    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-restaurant_68122239.jpg',
-    title: 'Moroccan Restaurant',
+    url: 'https://drive.google.com/uc?export=view&id=1qV6Gi6tLgGs6Vy4j7e4V9aDyDkvJgHSP',
+    title: 'Moroccan Architecture',
   },
   {
     id: '5',
-    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-dining_30a5841a.jpg',
-    title: 'Gourmet Dining',
+    url: 'https://drive.google.com/uc?export=view&id=1sMcrfAy80ubQ7rjdTS1-pZqIqq3olZB9',
+    title: 'Dining Experience',
   },
   {
     id: '6',
-    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-pool_483e781d.jpg',
-    title: 'Relaxation Area',
+    url: 'https://drive.google.com/uc?export=view&id=1AoGAqL4D_CidfucmY3L8T78Qgupt6JxE',
+    title: 'Guest Activities',
   },
   {
     id: '7',
-    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-kasbah_0bba9e74.jpg',
-    title: 'Moroccan Kasbah',
+    url: 'https://drive.google.com/uc?export=view&id=1utbL1vhJd_UF0s9qO6B6slpTpYXHQhY7',
+    title: 'Hotel Amenities',
   },
   {
     id: '8',
-    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-market_e970135d.jpg',
-    title: 'Local Market',
+    url: 'https://drive.google.com/uc?export=view&id=1HrfscEdf5PKGLrdXfa-OeHAZstxS16rQ',
+    title: 'Sunset View',
+  },
+  {
+    id: '9',
+    url: 'https://drive.google.com/uc?export=view&id=1S3aDlxbmBUuc5XXqARonuH2S1Fj_YReI',
+    title: 'Guest Gathering',
+  },
+  {
+    id: '10',
+    url: 'https://drive.google.com/uc?export=view&id=18qPMlRsjTq-IqIMs6DGagNSUXA4EEsyE',
+    title: 'Scenic View',
   },
 ];
 
@@ -104,6 +114,7 @@ export default function BottomGallery() {
                 src={GALLERY_IMAGES[currentIndex].url}
                 alt={GALLERY_IMAGES[currentIndex].title}
                 className="w-full h-full object-cover transition-opacity duration-500"
+                loading="lazy"
               />
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
@@ -139,6 +150,7 @@ export default function BottomGallery() {
                       src={image.url}
                       alt={image.title}
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   </button>
                 ))}
