@@ -11,7 +11,7 @@ export default function RoomsSection() {
 
   const handleWhatsAppClick = () => {
     const phoneNumber = '212630003333';
-    const message = encodeURIComponent('Hello, I would like to book a room at Hotel La Renaissance.');
+    const message = encodeURIComponent(t('whatsapp.room'));
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 

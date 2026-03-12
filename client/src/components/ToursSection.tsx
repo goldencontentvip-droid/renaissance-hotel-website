@@ -26,7 +26,7 @@ export default function ToursSection() {
 
   const handlePlanAdventure = () => {
     const phoneNumber = '212662243579';
-    const message = encodeURIComponent('Hello TATA EXPLORE, I would like to plan an adventure tour.');
+    const message = encodeURIComponent(t('whatsapp.tour'));
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 

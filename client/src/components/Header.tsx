@@ -9,7 +9,7 @@ export default function Header() {
 
   const handleWhatsAppClick = () => {
     const phoneNumber = '212630003333';
-    const message = encodeURIComponent('Hello, I would like to book a stay at Hotel La Renaissance.');
+    const message = encodeURIComponent(t('whatsapp.booking'));
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
@@ -30,8 +30,20 @@ export default function Header() {
             <span className="text-accent-foreground font-serif font-bold text-lg">LR</span>
           </div>
           <div className="hidden sm:block">
-            <h1 className="text-lg font-serif font-bold text-foreground">La Renaissance</h1>
-            <p className="text-xs text-muted-foreground">Hotel & Restaurant</p>
+            <h1 className="text-lg font-serif font-bold text-foreground">
+              {language === 'ar' ? 'رينيسانس' : 'La Renaissance'}
+            </h1>
+            <p className="text-xs text-muted-foreground">
+              {language === 'ar'
+                ? 'فندق ومطعم'
+                : language === 'fr'
+                ? 'Hôtel & Restaurant'
+                : language === 'es'
+                ? 'Hotel & Restaurante'
+                : language === 'it'
+                ? 'Hotel & Ristorante'
+                : 'Hotel & Restaurant'}
+            </p>
           </div>
         </div>
 
@@ -51,15 +63,15 @@ export default function Header() {
         {/* Right Section */}
         <div className="flex items-center gap-4">
           {/* Language Switcher */}
-          <div className="hidden sm:flex items-center gap-2 border-l border-border pl-4">
-            {(['en', 'fr', 'ar'] as const).map((lang) => (
+          <div className="hidden sm:flex items-center gap-1 border-l border-border pl-4">
+            {(['fr', 'ar', 'en', 'es', 'it'] as const).map((lang) => (
               <button
                 key={lang}
                 onClick={() => setLanguage(lang)}
-                className={`text-xs font-semibold px-2 py-1 rounded transition-colors ${
+                className={`text-xs font-semibold px-2 py-1 rounded-md transition-all duration-200 ${
                   language === lang
-                    ? 'bg-accent text-accent-foreground'
-                    : 'text-foreground hover:bg-secondary'
+                    ? 'bg-accent text-accent-foreground shadow-md'
+                    : 'text-foreground hover:bg-secondary/80'
                 }`}
               >
                 {lang.toUpperCase()}
@@ -100,7 +112,7 @@ export default function Header() {
               </a>
             ))}
             <div className="flex gap-2 pt-4 border-t border-border">
-              {(['en', 'fr', 'ar'] as const).map((lang) => (
+              {(['fr', 'ar', 'en', 'es', 'it'] as const).map((lang) => (
                 <button
                   key={lang}
                   onClick={() => {

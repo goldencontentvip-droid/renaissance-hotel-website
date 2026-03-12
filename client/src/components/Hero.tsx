@@ -11,7 +11,7 @@ export default function Hero({ backgroundImage }: HeroProps) {
 
   const handleWhatsAppClick = () => {
     const phoneNumber = '212630003333';
-    const message = encodeURIComponent('Hello, I would like to book a stay at Hotel La Renaissance.');
+    const message = encodeURIComponent(t('whatsapp.booking'));
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
@@ -30,20 +30,20 @@ export default function Hero({ backgroundImage }: HeroProps) {
     >
       <div className="absolute inset-0 bg-black/30" />
 
-      <div className="relative z-10 container flex flex-col items-center justify-center text-center gap-6 py-20">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white drop-shadow-lg">
+      <div className="relative z-10 container flex flex-col items-center justify-center text-center gap-4 md:gap-6 py-12 md:py-20 px-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white drop-shadow-lg leading-tight">
           {t('hero.title')}
         </h1>
 
-        <p className="text-lg md:text-xl lg:text-2xl text-white/90 font-light drop-shadow-md max-w-2xl">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 font-light drop-shadow-md max-w-2xl">
           {t('hero.subtitle')}
         </p>
 
         <Button
           onClick={handleWhatsAppClick}
-          className="mt-8 px-8 py-4 bg-white text-accent hover:bg-white/90 font-serif font-semibold rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300"
+          className="mt-6 md:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-white text-accent hover:bg-white/90 font-serif font-semibold rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
         >
-          <MessageCircle size={20} />
+          <MessageCircle size={18} />
           {t('hero.cta')}
         </Button>
       </div>

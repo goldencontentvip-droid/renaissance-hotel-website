@@ -43,40 +43,40 @@
 }
 
 :root {
-  /* Hotel La Renaissance - Luxury Moroccan Theme */
-  --primary: #B8860B; /* Terracotta/Gold */
-  --primary-foreground: #FFFAF0; /* Cream */
+  /* Hotel La Renaissance - Premium Moroccan Theme */
+  --primary: #C17A3A; /* Rich Terracotta */
+  --primary-foreground: #FFFBF7; /* Off-White */
   --sidebar-primary: #A0692E;
-  --sidebar-primary-foreground: #FFFAF0;
-  --chart-1: #D4AF37;
-  --chart-2: #B8860B;
+  --sidebar-primary-foreground: #FFFBF7;
+  --chart-1: #E8C547;
+  --chart-2: #C17A3A;
   --chart-3: #8B6F47;
   --chart-4: #6B5344;
   --chart-5: #3E2723;
-  --radius: 0.65rem;
-  --background: #FFFAF0; /* Warm Cream */
-  --foreground: #3E2723; /* Dark Brown */
+  --radius: 0.75rem;
+  --background: #FFFBF7; /* Premium Cream */
+  --foreground: #2C1F1A; /* Deep Brown */
   --card: #FFFFFF;
-  --card-foreground: #3E2723;
+  --card-foreground: #2C1F1A;
   --popover: #FFFFFF;
-  --popover-foreground: #3E2723;
-  --secondary: #F5E6D3; /* Warm Beige */
-  --secondary-foreground: #3E2723;
+  --popover-foreground: #2C1F1A;
+  --secondary: #F8EFE5; /* Soft Beige */
+  --secondary-foreground: #2C1F1A;
   --muted: #E8D5C4;
   --muted-foreground: #6B5344;
-  --accent: #B8860B; /* Terracotta */
-  --accent-foreground: #FFFAF0;
+  --accent: #C17A3A; /* Premium Terracotta */
+  --accent-foreground: #FFFBF7;
   --destructive: #D32F2F;
-  --destructive-foreground: #FFFAF0;
+  --destructive-foreground: #FFFBF7;
   --border: #E8D5C4;
-  --input: #F5E6D3;
-  --ring: #B8860B;
-  --sidebar: #FFFAF0;
-  --sidebar-foreground: #3E2723;
-  --sidebar-accent: #B8860B;
-  --sidebar-accent-foreground: #FFFAF0;
+  --input: #F8EFE5;
+  --ring: #C17A3A;
+  --sidebar: #FFFBF7;
+  --sidebar-foreground: #2C1F1A;
+  --sidebar-accent: #C17A3A;
+  --sidebar-accent-foreground: #FFFBF7;
   --sidebar-border: #E8D5C4;
-  --sidebar-ring: #B8860B;
+  --sidebar-ring: #C17A3A;
 }
 
 .dark {
