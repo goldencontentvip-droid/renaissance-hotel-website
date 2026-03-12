@@ -39,7 +39,7 @@ export default function Hero({ backgroundImage }: HeroProps) {
 
         <Button
           onClick={handleWhatsAppClick}
-          className="mt-6 md:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-white/95 text-foreground hover:bg-white font-sans font-semibold rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
+          className="mt-6 md:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-white/95 text-black hover:bg-white font-sans font-semibold rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
         >
           <MessageCircle size={18} />
           {t('hero.cta')}

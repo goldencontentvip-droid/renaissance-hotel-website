@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import BottomGallery from '@/components/BottomGallery';
 import RoomsSection from '@/components/RoomsSection';
 import ToursSection from '@/components/ToursSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
@@ -26,6 +27,9 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section with Hotel Courtyard Background */}
         <Hero backgroundImage="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80" />
+
+        {/* Bottom Gallery Carousel */}
+        <BottomGallery />
 
         {/* Rooms Section */}
         <RoomsSection />
