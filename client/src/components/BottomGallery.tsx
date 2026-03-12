@@ -10,32 +10,32 @@ interface GalleryImage {
 const GALLERY_IMAGES: GalleryImage[] = [
   {
     id: '1',
-    url: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-courtyard-YwayyvE2FwZHvWGXUURXu4.webp',
     title: 'Hotel Courtyard',
   },
   {
     id: '2',
-    url: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-bedroom-8f8ZjZBdusaLPEUK72kkyk.webp',
     title: 'Bedroom Suite',
   },
   {
     id: '3',
-    url: 'https://images.unsplash.com/photo-1571115764595-644a262f8a94?w=400&h=300&fit=crop',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-desert-2VNtr4a5vo8aSSRRetXNrf.webp',
     title: 'Desert Landscape',
   },
   {
     id: '4',
-    url: 'https://images.unsplash.com/photo-1564078516577-ee0ebc4b37cd?w=400&h=300&fit=crop',
-    title: 'Moroccan Architecture',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-restaurant-SsVKQmP9qYfn6VaxrmNstG.webp',
+    title: 'Moroccan Restaurant',
   },
   {
     id: '5',
-    url: 'https://images.unsplash.com/photo-1566154969555-2be619edc82b?w=400&h=300&fit=crop',
-    title: 'Restaurant Dining',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-courtyard-YwayyvE2FwZHvWGXUURXu4.webp',
+    title: 'Evening Ambiance',
   },
   {
     id: '6',
-    url: 'https://images.unsplash.com/photo-1542314503-37143f4f6b13?w=400&h=300&fit=crop',
+    url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-desert-2VNtr4a5vo8aSSRRetXNrf.webp',
     title: 'Desert Adventure',
   },
 ];
