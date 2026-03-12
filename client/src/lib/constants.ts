@@ -4,7 +4,7 @@ export const HOTEL_INFO = {
   tagline: 'Authentic Moroccan Hospitality in The Heart of Tata',
   location: 'Tata, Morocco',
   phone: '+212 6 30 00 33 33',
-  email: 'info@hotellarenaissance.com',
+  email: 'larenaissance1982@gmail.com',
   whatsapp: '+212630003333', // WhatsApp format without spaces
   address: 'Tata, Morocco',
   coordinates: {
