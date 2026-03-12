@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import RoomsSection from '@/components/RoomsSection';
 import ToursSection from '@/components/ToursSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import GallerySection from '@/components/GallerySection';
 import LocationSection from '@/components/LocationSection';
 import Footer from '@/components/Footer';
 
@@ -34,6 +35,9 @@ export default function Home() {
 
         {/* Testimonials Section */}
         <TestimonialsSection />
+
+        {/* Gallery Section */}
+        <GallerySection />
 
         {/* Location & Maps Section */}
         <LocationSection />

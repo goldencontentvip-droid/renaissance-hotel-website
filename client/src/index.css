@@ -43,61 +43,61 @@
 }
 
 :root {
-  /* Hotel La Renaissance - Premium Moroccan Theme */
-  --primary: #C17A3A; /* Rich Terracotta */
-  --primary-foreground: #FFFBF7; /* Off-White */
-  --sidebar-primary: #A0692E;
-  --sidebar-primary-foreground: #FFFBF7;
-  --chart-1: #E8C547;
-  --chart-2: #C17A3A;
-  --chart-3: #8B6F47;
+  /* Hotel La Renaissance - Dark Theme with Golden Sunset */
+  --primary: #C9A961; /* Golden Accent */
+  --primary-foreground: #1A2A3A; /* Dark Navy */
+  --sidebar-primary: #D4A574;
+  --sidebar-primary-foreground: #1A2A3A;
+  --chart-1: #D4A574;
+  --chart-2: #C9A961;
+  --chart-3: #A0826D;
   --chart-4: #6B5344;
   --chart-5: #3E2723;
   --radius: 0.75rem;
-  --background: #FFFBF7; /* Premium Cream */
-  --foreground: #2C1F1A; /* Deep Brown */
-  --card: #FFFFFF;
-  --card-foreground: #2C1F1A;
-  --popover: #FFFFFF;
-  --popover-foreground: #2C1F1A;
-  --secondary: #F8EFE5; /* Soft Beige */
-  --secondary-foreground: #2C1F1A;
-  --muted: #E8D5C4;
-  --muted-foreground: #6B5344;
-  --accent: #C17A3A; /* Premium Terracotta */
-  --accent-foreground: #FFFBF7;
-  --destructive: #D32F2F;
-  --destructive-foreground: #FFFBF7;
-  --border: #E8D5C4;
-  --input: #F8EFE5;
-  --ring: #C17A3A;
-  --sidebar: #FFFBF7;
-  --sidebar-foreground: #2C1F1A;
-  --sidebar-accent: #C17A3A;
-  --sidebar-accent-foreground: #FFFBF7;
-  --sidebar-border: #E8D5C4;
-  --sidebar-ring: #C17A3A;
+  --background: #1a2a3a; /* Dark Navy Background */
+  --foreground: #FFFFFF; /* White Text */
+  --card: #2a3a4a; /* Lighter Dark */
+  --card-foreground: #FFFFFF;
+  --popover: #2a3a4a;
+  --popover-foreground: #FFFFFF;
+  --secondary: #3a4a5a; /* Medium Dark */
+  --secondary-foreground: #FFFFFF;
+  --muted: #4a5a6a;
+  --muted-foreground: #C9A961;
+  --accent: #C9A961; /* Golden */
+  --accent-foreground: #1A2A3A;
+  --destructive: #EF5350;
+  --destructive-foreground: #FFFFFF;
+  --border: #3a4a5a;
+  --input: #2a3a4a;
+  --ring: #C9A961;
+  --sidebar: #1a2a3a;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-accent: #C9A961;
+  --sidebar-accent-foreground: #1A2A3A;
+  --sidebar-border: #3a4a5a;
+  --sidebar-ring: #C9A961;
 }
 
 .dark {
-  --primary: #D4AF37;
-  --primary-foreground: #1A1410;
-  --sidebar-primary: #C9A227;
-  --sidebar-primary-foreground: #FFFAF0;
-  --background: #1A1410;
-  --foreground: #F5E6D3;
-  --card: #2D2420;
-  --card-foreground: #F5E6D3;
-  --popover: #2D2420;
-  --popover-foreground: #F5E6D3;
-  --secondary: #3E2723;
-  --secondary-foreground: #F5E6D3;
-  --muted: #4A3F38;
-  --muted-foreground: #B8860B;
-  --accent: #D4AF37;
-  --accent-foreground: #1A1410;
+  --primary: #C9A961;
+  --primary-foreground: #1A2A3A;
+  --sidebar-primary: #D4A574;
+  --sidebar-primary-foreground: #1A2A3A;
+  --background: #1a2a3a;
+  --foreground: #FFFFFF;
+  --card: #2a3a4a;
+  --card-foreground: #FFFFFF;
+  --popover: #2a3a4a;
+  --popover-foreground: #FFFFFF;
+  --secondary: #3a4a5a;
+  --secondary-foreground: #FFFFFF;
+  --muted: #4a5a6a;
+  --muted-foreground: #C9A961;
+  --accent: #C9A961;
+  --accent-foreground: #1A2A3A;
   --destructive: #EF5350;
-  --destructive-foreground: #1A1410;
+  --destructive-foreground: #FFFFFF;
   --border: #4A3F38;
   --input: #3E2723;
   --ring: #D4AF37;

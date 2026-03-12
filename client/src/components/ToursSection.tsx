@@ -74,6 +74,15 @@ export default function ToursSection() {
           })}
         </div>
 
+        {/* Desert Image */}
+        <div className="mb-12 rounded-2xl overflow-hidden shadow-lg h-96">
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/desert-camels-sunset-F2T3i3GJ9qTkunfhfqx3Mi.webp"
+            alt="Desert Sunset with Camels"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
         {/* Agency Info & CTA */}
         <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">

@@ -20,9 +20,7 @@ export default function Hero({ backgroundImage }: HeroProps) {
       id="home"
       className="relative w-full h-screen min-h-96 flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: backgroundImage
-          ? `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${backgroundImage})`
-          : 'linear-gradient(135deg, #B8860B 0%, #8B6F47 100%)',
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/hero-sunset-courtyard-85Ho22jhLmKhLDCQz2fhba.webp)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
@@ -41,7 +39,7 @@ export default function Hero({ backgroundImage }: HeroProps) {
 
         <Button
           onClick={handleWhatsAppClick}
-          className="mt-6 md:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-white text-accent hover:bg-white/90 font-serif font-semibold rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
+          className="mt-6 md:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-white/95 text-foreground hover:bg-white font-sans font-semibold rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
         >
           <MessageCircle size={18} />
           {t('hero.cta')}

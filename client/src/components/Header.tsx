@@ -25,10 +25,12 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
       <div className="container flex items-center justify-between py-4">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
-            <span className="text-accent-foreground font-serif font-bold text-lg">LR</span>
-          </div>
+        <div className="flex items-center gap-3">
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/la-renaissance-logo-NhhJj34M6Sj5tjuGnLncwN.webp"
+            alt="La Renaissance Logo"
+            className="w-12 h-12 object-contain"
+          />
           <div className="hidden sm:block">
             <h1 className="text-lg font-serif font-bold text-foreground">
               {language === 'ar' ? 'رينيسانس' : 'La Renaissance'}

@@ -44,7 +44,7 @@ export default function RoomsSection() {
               {/* Room Image */}
               <div className="w-full h-64 bg-gradient-to-br from-secondary to-secondary/60 flex items-center justify-center overflow-hidden relative">
                 <img
-                  src={room.id === 'double' ? 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop' : room.id === 'suite' ? 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop' : 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop'}
+                  src={room.id === 'double' ? 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/room-double-fkTAyDVwhLbJcadqeogasB.webp' : room.id === 'suite' ? 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/room-suite-kw8Tyq4hoXfvQtx2quHbnU.webp' : 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/room-double-fkTAyDVwhLbJcadqeogasB.webp'}
                   alt={getRoomTitle(room)}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
