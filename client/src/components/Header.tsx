@@ -27,7 +27,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center gap-3">
           <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/1000149357_53ec8863.webp"
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/1000149972_ddbd7eba.png"
             alt="La Renaissance Logo"
             className="w-12 h-12 object-contain"
           />
