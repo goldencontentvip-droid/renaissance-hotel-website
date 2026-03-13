@@ -22,9 +22,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/1000149972_ddbd7eba.png"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/logo-r-letter-footer-ZExZKUrHKVCV8AyENDReJE.webp"
                 alt="La Renaissance Logo"
-                className="w-10 h-10 object-contain"
+                className="w-12 h-12 object-contain"
               />
               <div>
                 <h3 className="text-lg font-serif font-bold text-background">La Renaissance</h3>
