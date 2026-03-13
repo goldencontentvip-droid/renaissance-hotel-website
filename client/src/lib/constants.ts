@@ -26,7 +26,7 @@ export const TOUR_AGENCY = {
 // Hotel Social Media
 export const SOCIAL_MEDIA = {
   instagram: 'https://www.instagram.com/hotel_la_renaissance',
-  facebook: 'https://www.facebook.com/hotellarenaissance',
+  facebook: 'https://facebook.com/Hotel.larenaissance.tata',
 };
 
 // Room Types
