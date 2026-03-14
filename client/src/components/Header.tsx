@@ -36,7 +36,7 @@ export default function Header() {
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/AI_Generated_Logo_2026-03-14_47cec9a6-ffdb-4d1d-9f72-981fb7e939ea_4486e312.png"
             alt="La Renaissance Logo"
-            className="hidden md:block h-10 w-auto object-contain"
+            className="hidden md:block h-18 w-auto object-contain"
           />
         </div>
 
