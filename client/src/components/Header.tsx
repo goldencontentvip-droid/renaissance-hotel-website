@@ -23,13 +23,13 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
-      <div className="container flex items-center justify-between py-4">
+      <div className="container flex items-center justify-between py-3">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-shrink-0">
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/AI_Generated_Logo_2026-03-14_47cec9a6-ffdb-4d1d-9f72-981fb7e939ea_4486e312.png"
             alt="La Renaissance Logo"
-            className="h-14 w-auto object-contain"
+            className="h-20 md:h-24 w-auto object-contain"
           />
         </div>
 
