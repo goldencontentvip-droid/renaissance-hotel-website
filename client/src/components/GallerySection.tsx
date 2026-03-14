@@ -5,6 +5,16 @@ export default function GallerySection() {
 
   const galleryImages = [
     {
+      src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-kasbah-PHkTTANoj6GHCyXAMaTK5n.webp',
+      alt: 'Moroccan Kasbah',
+      title: language === 'ar' ? 'القصبة المغربية' : language === 'fr' ? 'Kasbah Marocain' : 'Moroccan Kasbah'
+    },
+    {
+      src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-market-9ptUyvyXwA25pJ4yaBj66j.webp',
+      alt: 'Moroccan Market',
+      title: language === 'ar' ? 'السوق التقليدي' : language === 'fr' ? 'Souk Traditionnel' : 'Traditional Market'
+    },
+    {
       src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-pool-6RAftArkL3DwfiB27S3rsY.webp',
       alt: 'Hotel Pool',
       title: language === 'ar' ? 'حمام السباحة' : language === 'fr' ? 'Piscine de l\'Hôtel' : 'Hotel Pool'
@@ -13,21 +23,6 @@ export default function GallerySection() {
       src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/gallery-dining-KoGC5UdUEkBGafVYU5qqnr.webp',
       alt: 'Gourmet Dining',
       title: language === 'ar' ? 'الطعام الفاخر' : language === 'fr' ? 'Gastronomie' : 'Gourmet Dining'
-    },
-    {
-      src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/IMG-20260314-WA0052_e0ef3601.jpg',
-      alt: 'Hotel Interior',
-      title: language === 'ar' ? 'الديكور الداخلي' : language === 'fr' ? 'Décor Intérieur' : 'Hotel Interior'
-    },
-    {
-      src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/IMG-20260314-WA0053_48f327e4.jpg',
-      alt: 'Hotel Ambiance',
-      title: language === 'ar' ? 'الأجواء الفاخرة' : language === 'fr' ? 'Ambiance Luxueuse' : 'Luxury Ambiance'
-    },
-    {
-      src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/IMG-20260314-WA0056_ba254d12.jpg',
-      alt: 'Hotel Courtyard',
-      title: language === 'ar' ? 'ساحة الفندق' : language === 'fr' ? 'Cour de l\'Hôtel' : 'Hotel Courtyard'
     }
   ];
 
