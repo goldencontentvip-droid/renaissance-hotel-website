@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
-      <div className="container flex items-center justify-between py-1 px-1 md:px-4">
+      <div className="container flex items-center justify-between py-0.5 px-0 md:px-4">
         {/* Logo */}
         <div className="flex items-center gap-0 flex-shrink-0">
           <img
