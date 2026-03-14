@@ -23,20 +23,20 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
-      <div className="container flex items-center justify-between py-0.5 px-0.5 md:px-4">
+      <div className="container flex items-center justify-between py-1 px-1 md:px-4 md:py-2">
         {/* Logo */}
         <div className="flex items-center gap-0 flex-shrink-0">
           {/* Mobile Logo - Compact */}
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/IMG_20260314_081608_a245c813.png"
             alt="La Renaissance Logo"
-            className="h-20 md:hidden w-auto object-contain"
+            className="h-8 md:hidden w-auto object-contain"
           />
           {/* Desktop Logo - Full */}
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/AI_Generated_Logo_2026-03-14_47cec9a6-ffdb-4d1d-9f72-981fb7e939ea_4486e312.png"
             alt="La Renaissance Logo"
-            className="hidden md:block h-28 w-auto object-contain"
+            className="hidden md:block h-10 w-auto object-contain"
           />
         </div>
 
