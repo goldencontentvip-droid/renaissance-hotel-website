@@ -23,8 +23,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
-      <div className="w-full flex justify-center">
-        <div className="flex items-center justify-between py-0.5 px-0 md:px-4 w-full md:max-w-4xl">
+      <div className="container flex items-center justify-between py-0.5 px-0 md:px-4">
         {/* Logo */}
         <div className="flex items-center gap-0 flex-shrink-0">
           <img
@@ -83,12 +82,11 @@ export default function Header() {
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-        </div>
       </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-background">
+        <div className="md:hidden border-t border-border bg-background">
           <nav className="container py-4 flex flex-col gap-4">
             {navItems.map((item) => (
               <a
