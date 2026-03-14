@@ -25,28 +25,12 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
       <div className="container flex items-center justify-between py-4">
         {/* Logo */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/logo-header-transparent_c5916de3.png"
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/AI_Generated_Logo_2026-03-14_47cec9a6-ffdb-4d1d-9f72-981fb7e939ea_4486e312.png"
             alt="La Renaissance Logo"
-            className="h-12 w-auto object-contain"
+            className="h-14 w-auto object-contain"
           />
-          <div className="hidden sm:block">
-            <h1 className="text-lg font-serif font-bold text-foreground">
-              {language === 'ar' ? 'رينيسانس' : 'La Renaissance'}
-            </h1>
-            <p className="text-xs text-muted-foreground">
-              {language === 'ar'
-                ? 'فندق ومطعم'
-                : language === 'fr'
-                ? 'Hôtel & Restaurant'
-                : language === 'es'
-                ? 'Hotel & Restaurante'
-                : language === 'it'
-                ? 'Hotel & Ristorante'
-                : 'Hotel & Restaurant'}
-            </p>
-          </div>
         </div>
 
         {/* Desktop Navigation */}
