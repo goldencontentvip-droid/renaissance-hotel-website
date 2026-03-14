@@ -22,7 +22,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
+    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm shadow-sm">
       <div className="container flex items-center justify-between py-0.5 px-0 md:px-4">
         {/* Logo */}
         <div className="flex items-center gap-0 flex-shrink-0">
@@ -86,7 +86,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-border bg-background">
+        <div className="md:hidden bg-background">
           <nav className="container py-4 flex flex-col gap-4">
             {navItems.map((item) => (
               <a
