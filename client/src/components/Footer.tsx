@@ -20,15 +20,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex flex-col items-start gap-4 mb-4">
+            <div className="flex items-center gap-3 mb-4">
               <img
                 src="https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/footer_logo_square_19e9d153.png"
                 alt="La Renaissance Logo"
-                className="w-20 h-20 object-contain"
+                className="w-20 h-20 object-contain flex-shrink-0"
               />
               <div>
-                <h3 className="text-xl font-serif font-bold text-background">La Renaissance</h3>
-                <p className="text-sm text-background/80">Hotel & Restaurant</p>
+                <h3 className="text-lg font-serif font-bold text-background">La Renaissance</h3>
+                <p className="text-xs text-background/80">Hotel & Restaurant</p>
               </div>
             </div>
             <p className="text-sm text-background/70 font-sans">
