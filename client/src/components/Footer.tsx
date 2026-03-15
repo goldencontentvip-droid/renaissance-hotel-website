@@ -24,7 +24,7 @@ export default function Footer() {
               <img
                 src="https://d2xsxph8kpxj0f.cloudfront.net/310519663113079627/WYdVPGNXtFVxRfZMFbQdS7/new_footer_logo_a5e18ee1.png"
                 alt="La Renaissance Logo"
-                className="w-20 h-20 object-contain"
+                className="w-28 h-28 object-contain"
               />
               <div>
                 <h3 className="text-lg font-serif font-bold text-background">La Renaissance</h3>
