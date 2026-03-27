@@ -53,7 +53,7 @@ export default function Footer() {
                 : 'Quick Links'}
             </h4>
             <ul className="space-y-2">
-              {footerLinks.slice(0, 3).map((link) => (
+              {footerLinks.slice(0, 2).map((link) => (
                 <li key={link.key}>
                   <a
                     href={link.href}
