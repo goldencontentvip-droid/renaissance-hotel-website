@@ -73,6 +73,20 @@ export const translations: Record<Language, Record<string, string>> = {
     'common.learnMore': 'En Savoir Plus',
     'common.bookNow': 'Réserver Maintenant',
 
+    // Email Booking
+    'hero.emailCta': 'Réserver par Email',
+    'email.booking.subject': 'Demande de Réservation - Hôtel La Renaissance',
+    'email.booking.body': 'Bonjour,\n\nJ\'aimerais réserver un séjour à l\'Hôtel La Renaissance.\n\nPouvez-vous m\'envoyer les détails et les tarifs disponibles?\n\nMerci,',
+
+    // About Modal
+    'modal.about.title': 'À Propos',
+    'modal.about.hotelTitle': 'Hôtel La Renaissance',
+    'modal.about.hotelDescription': 'Bienvenue à l\'Hôtel La Renaissance, votre destination de choix pour une expérience authentique de l\'hospitalité marocaine au cœur de Tata. Notre établissement combine le charme traditionnel avec le confort moderne, offrant à nos hôtes une expérience inoubliable dans un cadre enchanteur.',
+    'modal.about.tourTitle': 'Agence de Voyages - TATA EXPLORE',
+    'modal.about.tourDescription': 'Découvrez les joyaux cachés de Tata avec notre partenaire TATA EXPLORE. Nous proposons des expériences touristiques authentiques, des treks dans le désert, des visites de sites historiques et des immersions culturelles pour enrichir votre séjour.',
+    'modal.about.visitInstagram': 'Visitez notre Instagram',
+    'modal.about.close': 'Fermer',
+
     // WhatsApp Messages
     'whatsapp.booking': 'Bonjour, j\'aimerais réserver un séjour à l\'Hôtel La Renaissance.',
     'whatsapp.room': 'Bonjour, j\'aimerais réserver une chambre à l\'Hôtel La Renaissance.',
@@ -139,6 +153,20 @@ export const translations: Record<Language, Record<string, string>> = {
     // Common
     'common.learnMore': 'اعرف المزيد',
     'common.bookNow': 'احجز الآن',
+
+    // Email Booking
+    'hero.emailCta': 'احجز عبر البريد الإلكتروني',
+    'email.booking.subject': 'طلب حجز - فندق رينيسانس',
+    'email.booking.body': 'السلام عليكم،\n\nأود حجز إقامة في فندق رينيسانس.\n\nهل يمكنك إرسال التفاصيل والأسعار المتاحة؟\n\nشكراً،',
+
+    // About Modal
+    'modal.about.title': 'حول',
+    'modal.about.hotelTitle': 'فندق رينيسانس',
+    'modal.about.hotelDescription': 'مرحباً بك في فندق رينيسانس، وجهتك المفضلة لتجربة أصيلة للضيافة المغربية في قلب تاتا. يجمع فندقنا بين السحر التقليدي والراحة الحديثة، مما يوفر لضيوفنا تجربة لا تُنسى في إطار ساحر.',
+    'modal.about.tourTitle': 'وكالة السياحة - تاتا إكسبلور',
+    'modal.about.tourDescription': 'اكتشف الجواهر الخفية في تاتا مع شريكنا تاتا إكسبلور. نقدم تجارب سياحية أصيلة ورحلات صحراوية وزيارات مواقع تاريخية وانغماس ثقافي لإثراء إقامتك.',
+    'modal.about.visitInstagram': 'زيارة حسابنا على إنستغرام',
+    'modal.about.close': 'إغلاق',
 
     // WhatsApp Messages
     'whatsapp.booking': 'السلام عليكم، أود حجز إقامة في فندق رينيسانس.',
@@ -207,6 +235,20 @@ export const translations: Record<Language, Record<string, string>> = {
     'common.learnMore': 'Learn More',
     'common.bookNow': 'Book Now',
 
+    // Email Booking
+    'hero.emailCta': 'Book by Email',
+    'email.booking.subject': 'Booking Request - Hotel La Renaissance',
+    'email.booking.body': 'Hello,\n\nI would like to book a stay at Hotel La Renaissance.\n\nCould you please send me the available details and rates?\n\nThank you,',
+
+    // About Modal
+    'modal.about.title': 'About',
+    'modal.about.hotelTitle': 'Hotel La Renaissance',
+    'modal.about.hotelDescription': 'Welcome to Hotel La Renaissance, your destination of choice for an authentic experience of Moroccan hospitality in the heart of Tata. Our establishment combines traditional charm with modern comfort, offering our guests an unforgettable experience in an enchanting setting.',
+    'modal.about.tourTitle': 'Tour Agency - TATA EXPLORE',
+    'modal.about.tourDescription': 'Discover the hidden gems of Tata with our partner TATA EXPLORE. We offer authentic tourism experiences, desert treks, historical site visits and cultural immersion to enrich your stay.',
+    'modal.about.visitInstagram': 'Visit our Instagram',
+    'modal.about.close': 'Close',
+
     // WhatsApp Messages
     'whatsapp.booking': 'Hello, I would like to book a stay at Hotel La Renaissance.',
     'whatsapp.room': 'Hello, I would like to book a room at Hotel La Renaissance.',
@@ -274,6 +316,20 @@ export const translations: Record<Language, Record<string, string>> = {
     'common.learnMore': 'Más Información',
     'common.bookNow': 'Reservar Ahora',
 
+    // Email Booking
+    'hero.emailCta': 'Reservar por Email',
+    'email.booking.subject': 'Solicitud de Reserva - Hotel La Renaissance',
+    'email.booking.body': 'Hola,\n\nMe gustaría reservar una estancia en el Hotel La Renaissance.\n\n¿Podrías enviarme los detalles y las tarifas disponibles?\n\nGracias,',
+
+    // About Modal
+    'modal.about.title': 'Acerca de',
+    'modal.about.hotelTitle': 'Hotel La Renaissance',
+    'modal.about.hotelDescription': 'Bienvenido al Hotel La Renaissance, tu destino de elección para una experiencia auténtica de la hospitalidad marroquí en el corazón de Tata. Nuestro establecimiento combina el encanto tradicional con la comodidad moderna, ofreciendo a nuestros huéspedes una experiencia inolvidable en un entorno encantador.',
+    'modal.about.tourTitle': 'Agencia de Viajes - TATA EXPLORE',
+    'modal.about.tourDescription': 'Descubre las joyas ocultas de Tata con nuestro socio TATA EXPLORE. Ofrecemos experiencias turísticas auténticas, treks en el desierto, visitas a sitios históricos e inmersión cultural para enriquecer tu estancia.',
+    'modal.about.visitInstagram': 'Visita nuestro Instagram',
+    'modal.about.close': 'Cerrar',
+
     // WhatsApp Messages
     'whatsapp.booking': 'Hola, me gustaría reservar una estancia en el Hotel La Renaissance.',
     'whatsapp.room': 'Hola, me gustaría reservar una habitación en el Hotel La Renaissance.',
@@ -340,6 +396,20 @@ export const translations: Record<Language, Record<string, string>> = {
     // Common
     'common.learnMore': 'Scopri di Più',
     'common.bookNow': 'Prenota Ora',
+
+    // Email Booking
+    'hero.emailCta': 'Prenota per Email',
+    'email.booking.subject': 'Richiesta di Prenotazione - Hotel La Renaissance',
+    'email.booking.body': 'Ciao,\n\nVorrei prenotare un soggiorno all\'Hotel La Renaissance.\n\nPotresti inviarmi i dettagli e le tariffe disponibili?\n\nGrazie,',
+
+    // About Modal
+    'modal.about.title': 'Chi Siamo',
+    'modal.about.hotelTitle': 'Hotel La Renaissance',
+    'modal.about.hotelDescription': 'Benvenuto all\'Hotel La Renaissance, la tua destinazione ideale per un\'esperienza autentica dell\'ospitalità marocchina nel cuore di Tata. Il nostro stabilimento combina il fascino tradizionale con il comfort moderno, offrendo ai nostri ospiti un\'esperienza indimenticabile in un ambiente incantevole.',
+    'modal.about.tourTitle': 'Agenzia Turistica - TATA EXPLORE',
+    'modal.about.tourDescription': 'Scopri i gioielli nascosti di Tata con il nostro partner TATA EXPLORE. Offriamo esperienze turistiche autentiche, trekking nel deserto, visite a siti storici e immersione culturale per arricchire il tuo soggiorno.',
+    'modal.about.visitInstagram': 'Visita il nostro Instagram',
+    'modal.about.close': 'Chiudi',
 
     // WhatsApp Messages
     'whatsapp.booking': 'Ciao, vorrei prenotare un soggiorno all\'Hotel La Renaissance.',

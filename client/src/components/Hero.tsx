@@ -1,6 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle, Mail } from 'lucide-react';
+import { HOTEL_INFO } from '@/lib/constants';
 
 interface HeroProps {
   backgroundImage?: string;
@@ -13,6 +14,11 @@ export default function Hero({ backgroundImage }: HeroProps) {
     const phoneNumber = '212630003333';
     const message = encodeURIComponent(t('whatsapp.booking'));
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
+
+  const handleEmailClick = () => {
+    const mailtoLink = `mailto:${HOTEL_INFO.email}?subject=${encodeURIComponent(t('email.booking.subject'))}&body=${encodeURIComponent(t('email.booking.body'))}`;
+    window.location.href = mailtoLink;
   };
 
   return (
@@ -37,13 +43,22 @@ export default function Hero({ backgroundImage }: HeroProps) {
           {t('hero.subtitle')}
         </p>
 
-        <Button
-          onClick={handleWhatsAppClick}
-          className="mt-6 md:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-white/95 text-black hover:bg-white font-sans font-semibold rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
-        >
-          <MessageCircle size={18} />
-          {t('hero.cta')}
-        </Button>
+        <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
+          <Button
+            onClick={handleWhatsAppClick}
+            className="px-6 sm:px-8 py-3 sm:py-4 bg-white/95 text-black hover:bg-white font-sans font-semibold rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
+          >
+            <MessageCircle size={18} />
+            {t('hero.cta')}
+          </Button>
+          <Button
+            onClick={handleEmailClick}
+            className="px-6 sm:px-8 py-3 sm:py-4 bg-accent/90 text-white hover:bg-accent font-sans font-semibold rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
+          >
+            <Mail size={18} />
+            {t('hero.emailCta')}
+          </Button>
+        </div>
       </div>
 
       {/* Scroll Indicator */}

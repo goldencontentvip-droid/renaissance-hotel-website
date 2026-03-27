@@ -1,9 +1,12 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { HOTEL_INFO, SOCIAL_MEDIA } from '@/lib/constants';
 import { Instagram, Facebook, Mail, Phone } from 'lucide-react';
+import { useState } from 'react';
+import AboutModal from './AboutModal';
 
 export default function Footer() {
   const { t, language } = useLanguage();
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   const footerLinks = [
     { key: 'footer.about', href: '#home' },
@@ -73,7 +76,7 @@ export default function Footer() {
                 : 'More'}
             </h4>
             <ul className="space-y-2">
-              {footerLinks.slice(3).map((link) => (
+              {footerLinks.slice(3, 5).map((link) => (
                 <li key={link.key}>
                   <a
                     href={link.href}
@@ -83,6 +86,14 @@ export default function Footer() {
                   </a>
                 </li>
               ))}
+              <li>
+                <button
+                  onClick={() => setIsAboutOpen(true)}
+                  className="text-background/80 hover:text-accent transition-colors text-sm font-sans cursor-pointer"
+                >
+                  {t('footer.about')}
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -157,6 +168,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      {/* About Modal */}
+      <AboutModal isOpen={isAboutOpen} onClose={() => setIsAboutOpen(false)} />
     </footer>
   );
 }
