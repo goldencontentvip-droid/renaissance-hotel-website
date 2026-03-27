@@ -2,7 +2,6 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { X, MapPin, Phone, Mail, Globe } from 'lucide-react';
 import { HOTEL_INFO, TOUR_AGENCY } from '@/lib/constants';
-import { useState } from 'react';
 
 interface AboutModalProps {
   isOpen: boolean;
@@ -39,10 +38,16 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
               <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
                 <MapPin size={24} className="text-accent" />
               </div>
-              <h3 className="text-xl md:text-2xl font-serif font-bold text-foreground">
-                {t('modal.about.hotelTitle')}
-              </h3>
+              <div>
+                <h3 className="text-xl md:text-2xl font-serif font-bold text-foreground">
+                  {t('modal.about.hotelTitle')}
+                </h3>
+                <p className="text-sm text-foreground/60 font-light">
+                  {t('modal.about.hotelSubtitle')}
+                </p>
+              </div>
             </div>
+            
             <p className="text-foreground/80 leading-relaxed">
               {t('modal.about.hotelDescription')}
             </p>
@@ -50,20 +55,20 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
             {/* Hotel Contact Info */}
             <div className="bg-accent/5 rounded-lg p-4 space-y-3 mt-4">
               <div className="flex items-center gap-3 text-foreground/70">
-                <Phone size={18} className="text-accent" />
-                <a href={`tel:${HOTEL_INFO.phone}`} className="hover:text-accent transition-colors">
-                  {HOTEL_INFO.phone}
+                <Phone size={18} className="text-accent flex-shrink-0" />
+                <a href={`tel:${HOTEL_INFO.phone}`} className="hover:text-accent transition-colors break-all">
+                  {t('modal.about.hotelPhone')}
                 </a>
               </div>
               <div className="flex items-center gap-3 text-foreground/70">
-                <Mail size={18} className="text-accent" />
-                <a href={`mailto:${HOTEL_INFO.email}`} className="hover:text-accent transition-colors">
-                  {HOTEL_INFO.email}
+                <Mail size={18} className="text-accent flex-shrink-0" />
+                <a href={`mailto:${HOTEL_INFO.email}`} className="hover:text-accent transition-colors break-all">
+                  {t('modal.about.hotelEmail')}
                 </a>
               </div>
               <div className="flex items-center gap-3 text-foreground/70">
-                <MapPin size={18} className="text-accent" />
-                <span>{HOTEL_INFO.location}</span>
+                <MapPin size={18} className="text-accent flex-shrink-0" />
+                <span>{t('modal.about.hotelLocation')}</span>
               </div>
             </div>
           </section>
@@ -77,45 +82,66 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
               <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
                 <Globe size={24} className="text-accent" />
               </div>
-              <h3 className="text-xl md:text-2xl font-serif font-bold text-foreground">
-                {t('modal.about.tourTitle')}
-              </h3>
+              <div>
+                <h3 className="text-xl md:text-2xl font-serif font-bold text-foreground">
+                  {t('modal.about.tourTitle')}
+                </h3>
+                <p className="text-sm text-foreground/60 font-light">
+                  {t('modal.about.tourSubtitle')}
+                </p>
+              </div>
             </div>
+            
             <p className="text-foreground/80 leading-relaxed">
               {t('modal.about.tourDescription')}
             </p>
 
+            {/* Tour Features List */}
+            <ul className="space-y-2 text-foreground/80 ml-4">
+              <li className="flex gap-2">
+                <span className="text-accent font-bold">•</span>
+                <span>{t('modal.about.tourFeature1')}</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-accent font-bold">•</span>
+                <span>{t('modal.about.tourFeature2')}</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-accent font-bold">•</span>
+                <span>{t('modal.about.tourFeature3')}</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-accent font-bold">•</span>
+                <span>{t('modal.about.tourFeature4')}</span>
+              </li>
+            </ul>
+
             {/* Tour Agency Contact Info */}
             <div className="bg-accent/5 rounded-lg p-4 space-y-3 mt-4">
               <div className="flex items-center gap-3 text-foreground/70">
-                <span className="font-semibold text-accent">{TOUR_AGENCY.name}</span>
-              </div>
-              <div className="flex items-center gap-3 text-foreground/70">
-                <Phone size={18} className="text-accent" />
+                <Phone size={18} className="text-accent flex-shrink-0" />
                 <div className="flex flex-col gap-1">
-                  <a href={`tel:${TOUR_AGENCY.phone}`} className="hover:text-accent transition-colors">
-                    {TOUR_AGENCY.phone}
-                  </a>
-                  <a href={`tel:${TOUR_AGENCY.phone2}`} className="hover:text-accent transition-colors">
-                    {TOUR_AGENCY.phone2}
+                  <span className="font-semibold text-accent">{TOUR_AGENCY.name}</span>
+                  <a href={`tel:${TOUR_AGENCY.phone}`} className="hover:text-accent transition-colors break-all">
+                    {t('modal.about.tourPhone')}
                   </a>
                 </div>
               </div>
               <div className="flex items-center gap-3 text-foreground/70">
-                <Mail size={18} className="text-accent" />
-                <a href={`mailto:${TOUR_AGENCY.email}`} className="hover:text-accent transition-colors">
-                  {TOUR_AGENCY.email}
+                <Mail size={18} className="text-accent flex-shrink-0" />
+                <a href={`mailto:${TOUR_AGENCY.email}`} className="hover:text-accent transition-colors break-all">
+                  {t('modal.about.tourEmail')}
                 </a>
               </div>
               <div className="flex items-center gap-3 text-foreground/70">
-                <Globe size={18} className="text-accent" />
+                <Globe size={18} className="text-accent flex-shrink-0" />
                 <a 
                   href={TOUR_AGENCY.instagram} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-accent transition-colors"
                 >
-                  {t('modal.about.visitInstagram')}
+                  {t('modal.about.tourInstagram')}
                 </a>
               </div>
             </div>

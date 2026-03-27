@@ -91,7 +91,11 @@ export default function Footer() {
                   onClick={() => setIsAboutOpen(true)}
                   className="text-background/80 hover:text-accent transition-colors text-sm font-sans cursor-pointer"
                 >
-                  {t('footer.about')}
+                  {language === 'ar'
+                    ? 'حول'
+                    : language === 'fr'
+                    ? 'À Propos'
+                    : 'About'}
                 </button>
               </li>
             </ul>
