@@ -6,7 +6,7 @@ export const HOTEL_INFO = {
   phone: '+212 6 30 00 33 33',
   email: 'larenaissance1982@gmail.com',
   whatsapp: '+212630003333', // WhatsApp format without spaces
-  address: 'Tata, Morocco',
+  address: 'Hôtel La Renaissance, Tata, Morocco',
   coordinates: {
     lat: 29.9,
     lng: -5.9,
