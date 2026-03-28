@@ -70,6 +70,12 @@ const translations = {
     // Common
     'common.learnMore': 'En Savoir Plus',
     'common.bookNow': 'Réserver Maintenant',
+    'nav.book': 'Réserver',
+    'nav.home': 'Accueil',
+    'nav.rooms': 'Chambres & Suites',
+    'nav.restaurant': 'Restaurant',
+    'nav.tours': 'Agence de Voyages',
+    'nav.gallery': 'Galerie',
 
     // About Modal
     'modal.about.title': 'À Propos',
@@ -158,6 +164,12 @@ const translations = {
     // Common
     'common.learnMore': 'اعرف المزيد',
     'common.bookNow': 'احجز الآن',
+    'nav.book': 'احجز',
+    'nav.home': 'الرئيسية',
+    'nav.rooms': 'الغرف والأجنحة',
+    'nav.restaurant': 'المطعم',
+    'nav.tours': 'وكالة السياحة',
+    'nav.gallery': 'المعرض',
 
     // About Modal
     'modal.about.title': 'حول',
@@ -246,6 +258,12 @@ const translations = {
     // Common
     'common.learnMore': 'Learn More',
     'common.bookNow': 'Book Now',
+    'nav.book': 'Book',
+    'nav.home': 'Home',
+    'nav.rooms': 'Rooms & Suites',
+    'nav.restaurant': 'Restaurant',
+    'nav.tours': 'Tour Agency',
+    'nav.gallery': 'Gallery',
 
     // About Modal
     'modal.about.title': 'About',
@@ -332,8 +350,14 @@ const translations = {
     'footer.copyright': '© 2024 Hotel La Renaissance. Todos los derechos reservados.',
 
     // Common
-    'common.learnMore': 'Saber Más',
+    'common.learnMore': 'Más Información',
     'common.bookNow': 'Reservar Ahora',
+    'nav.book': 'Reservar',
+    'nav.home': 'Inicio',
+    'nav.rooms': 'Habitaciones y Suites',
+    'nav.restaurant': 'Restaurante',
+    'nav.tours': 'Agencia de Viajes',
+    'nav.gallery': 'Galería',
 
     // About Modal
     'modal.about.title': 'Acerca de',
@@ -422,6 +446,12 @@ const translations = {
     // Common
     'common.learnMore': 'Scopri di Più',
     'common.bookNow': 'Prenota Ora',
+    'nav.book': 'Prenota',
+    'nav.home': 'Home',
+    'nav.rooms': 'Camere e Suite',
+    'nav.restaurant': 'Ristorante',
+    'nav.tours': 'Agenzia Turistica',
+    'nav.gallery': 'Galleria',
 
     // About Modal
     'modal.about.title': 'Chi Siamo',

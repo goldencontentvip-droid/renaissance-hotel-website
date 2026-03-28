@@ -9,7 +9,6 @@ export default function Footer() {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   const footerLinks = [
-    { key: 'footer.about', href: '#home' },
     { key: 'footer.rooms', href: '#rooms' },
     { key: 'footer.restaurant', href: '#restaurant' },
     { key: 'footer.tours', href: '#tours' },
@@ -53,7 +52,7 @@ export default function Footer() {
                 : 'Quick Links'}
             </h4>
             <ul className="space-y-2">
-              {footerLinks.slice(0, 2).map((link) => (
+              {footerLinks.slice(0, 1).map((link) => (
                 <li key={link.key}>
                   <a
                     href={link.href}
@@ -76,7 +75,7 @@ export default function Footer() {
                 : 'More'}
             </h4>
             <ul className="space-y-2">
-              {footerLinks.slice(3, 5).map((link) => (
+              {footerLinks.slice(2, 4).map((link) => (
                 <li key={link.key}>
                   <a
                     href={link.href}
