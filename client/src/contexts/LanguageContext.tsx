@@ -36,6 +36,7 @@ const translations = {
     'tours.title': 'Agence de Voyages - TATA EXPLORE',
     'tours.subtitle': 'Découvrez les Merveilles de la Région',
     'tours.cta': 'Réserver une Expérience',
+    'tours.planAdventure': 'Planifier l\'Aventure',
 
     // Testimonials Section
     'testimonials.title': 'Ce que Disent Nos Clients',
@@ -131,6 +132,7 @@ const translations = {
     'tours.title': 'وكالة السياحة - تاتا إكسبلور',
     'tours.subtitle': 'اكتشف عجائب المنطقة',
     'tours.cta': 'احجز تجربة سياحية',
+    'tours.planAdventure': 'خطط للمغامرة',
 
     // Testimonials Section
     'testimonials.title': 'آراء ضيوفنا',
@@ -226,6 +228,7 @@ const translations = {
     'tours.title': 'Tour Agency - TATA EXPLORE',
     'tours.subtitle': 'Discover the Wonders of the Region',
     'tours.cta': 'Book an Experience',
+    'tours.planAdventure': 'Plan Your Adventure',
 
     // Testimonials Section
     'testimonials.title': 'What Our Guests Say',
@@ -320,6 +323,7 @@ const translations = {
     'tours.title': 'Agencia de Viajes - TATA EXPLORE',
     'tours.subtitle': 'Descubre las Maravillas de la Región',
     'tours.cta': 'Reserva una Experiencia',
+    'tours.planAdventure': 'Planifica tu Aventura',
 
     // Testimonials Section
     'testimonials.title': 'Lo Que Dicen Nuestros Huéspedes',
@@ -415,6 +419,7 @@ const translations = {
     'tours.title': 'Agenzia Turistica - TATA EXPLORE',
     'tours.subtitle': 'Scopri le Meraviglie della Regione',
     'tours.cta': 'Prenota un\'Esperienza',
+    'tours.planAdventure': 'Pianifica la Tua Avventura',
 
     // Testimonials Section
     'testimonials.title': 'Cosa Dicono i Nostri Ospiti',
