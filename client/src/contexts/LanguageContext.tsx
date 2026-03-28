@@ -30,6 +30,7 @@ const translations = {
     'rooms.title': 'Nos Chambres',
     'rooms.subtitle': 'Confort et Élégance pour Votre Séjour',
     'rooms.amenities': 'Équipements',
+    'rooms.viewDetails': 'Voir les Détails',
 
     // Tours Section
     'tours.title': 'Agence de Voyages - TATA EXPLORE',
@@ -124,6 +125,7 @@ const translations = {
     'rooms.title': 'غرفنا',
     'rooms.subtitle': 'الراحة والأناقة لإقامتك',
     'rooms.amenities': 'المرافق',
+    'rooms.viewDetails': 'عرض التفاصيل',
 
     // Tours Section
     'tours.title': 'وكالة السياحة - تاتا إكسبلور',
@@ -218,6 +220,7 @@ const translations = {
     'rooms.title': 'Our Rooms',
     'rooms.subtitle': 'Comfort and Elegance for Your Stay',
     'rooms.amenities': 'Amenities',
+    'rooms.viewDetails': 'View Details',
 
     // Tours Section
     'tours.title': 'Tour Agency - TATA EXPLORE',
@@ -310,9 +313,9 @@ const translations = {
 
     // Rooms Section
     'rooms.title': 'Nuestras Habitaciones',
-    'rooms.subtitle': 'Comodidad y Elegancia para Tu Estancia',
-    'rooms.amenities': 'Servicios',
-
+    'rooms.subtitle': 'Comodidad y Elegancia para tu Estadía',
+    'rooms.amenities': 'Comodidades',
+    'rooms.viewDetails': 'Ver Detalles',
     // Tours Section
     'tours.title': 'Agencia de Viajes - TATA EXPLORE',
     'tours.subtitle': 'Descubre las Maravillas de la Región',
@@ -406,6 +409,7 @@ const translations = {
     'rooms.title': 'Le Nostre Camere',
     'rooms.subtitle': 'Comfort ed Eleganza per il Tuo Soggiorno',
     'rooms.amenities': 'Servizi',
+    'rooms.viewDetails': 'Visualizza Dettagli',
 
     // Tours Section
     'tours.title': 'Agenzia Turistica - TATA EXPLORE',
