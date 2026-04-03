@@ -1,56 +1,55 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
+
+type Language = 'fr' | 'ar' | 'en' | 'es' | 'it';
 
 interface LanguageContextType {
-  language: 'fr' | 'ar' | 'en' | 'es' | 'it';
-  setLanguage: (lang: 'fr' | 'ar' | 'en' | 'es' | 'it') => void;
+  language: Language;
+  setLanguage: (lang: Language) => void;
   t: (key: string) => string;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-const translations = {
+export const translations: Record<Language, Record<string, string>> = {
   fr: {
-    // Header & Navigation
-    'header.home': 'Accueil',
-    'header.rooms': 'Chambres & Suites',
-    'header.restaurant': 'Restaurant',
-    'header.tours': 'Agence de Voyages',
-    'header.gallery': 'Galerie',
-    'header.contact': 'Contact',
+    // Navigation
+    'nav.home': 'Accueil',
+    'nav.rooms': 'Chambres & Suites',
+    'nav.restaurant': 'Restaurant',
+    'nav.tours': 'Agence de Voyages',
+    'nav.gallery': 'Galerie',
+    'nav.book': 'Réservez Votre Séjour',
 
-    // Hero Section
+    // Hero
     'hero.title': 'Bienvenue à l\'Hôtel La Renaissance',
     'hero.subtitle': 'L\'Hospitalité Marocaine Authentique au Cœur de Tata',
     'hero.cta': 'Réservez Votre Séjour via WhatsApp',
-    'hero.emailCta': 'Réserver par Email',
-    'email.booking.subject': 'Demande de Réservation - Hôtel La Renaissance',
-    'email.booking.body': 'Bonjour,\n\nJ\'aimerais réserver un séjour à l\'Hôtel La Renaissance.\n\nPouvez-vous m\'envoyer les détails et les tarifs disponibles?\n\nMerci,',
 
-    // Rooms Section
+    // Rooms
     'rooms.title': 'Nos Chambres',
-    'rooms.subtitle': 'Confort et Élégance pour Votre Séjour',
-    'rooms.amenities': 'Équipements',
+    'rooms.double': 'Chambre Double',
+    'rooms.double.desc': 'Confort et Style pour Deux',
+    'rooms.suite': 'Suite',
+    'rooms.suite.desc': 'Espace Luxueux et Équipements',
+    'rooms.family': 'Chambre Familiale',
+    'rooms.family.desc': 'Espace Lumineux et Équipements',
     'rooms.viewDetails': 'Voir les Détails',
 
-    // Tours Section
-    'tours.title': 'Agence de Voyages - TATA EXPLORE',
-    'tours.subtitle': 'Découvrez les Merveilles de la Région',
-    'tours.cta': 'Réserver une Expérience',
-    'tours.planAdventure': 'Planifier l\'Aventure',
+    // Tours
+    'tours.title': 'Découvrez les Joyaux Cachés de Tata avec Notre Agence de Voyages',
+    'tours.historical': 'Sites Historiques',
+    'tours.desert': 'Treks au Désert',
+    'tours.cultural': 'Expériences Culturelles',
+    'tours.planAdventure': 'Planifiez Votre Aventure',
 
-    // Testimonials Section
+    // Testimonials
     'testimonials.title': 'Ce que Disent Nos Clients',
-    'testimonials.subtitle': 'Expériences Inoubliables',
 
-    // Gallery Section
-    'gallery.title': 'Galerie',
-    'gallery.subtitle': 'Explorez Notre Établissement',
-
-    // Location Section
-    'location.title': 'Localisation',
+    // Location
+    'location.title': 'Notre Localisation',
     'location.getDirections': 'Obtenir les Directions',
 
-    // Contact Section
+    // Contact
     'contact.title': 'Nous Contacter',
     'contact.name': 'Nom',
     'contact.email': 'Email',
@@ -60,7 +59,8 @@ const translations = {
     'contact.address': 'Adresse',
 
     // Footer
-    'footer.rooms': 'Chambres & Suites',
+    'footer.about': 'À Propos',
+    'footer.rooms': 'Chambres',
     'footer.restaurant': 'Restaurant',
     'footer.tours': 'Voyages',
     'footer.gallery': 'Galerie',
@@ -72,12 +72,11 @@ const translations = {
     // Common
     'common.learnMore': 'En Savoir Plus',
     'common.bookNow': 'Réserver Maintenant',
-    'nav.book': 'Réserver',
-    'nav.home': 'Accueil',
-    'nav.rooms': 'Chambres & Suites',
-    'nav.restaurant': 'Restaurant',
-    'nav.tours': 'Agence de Voyages',
-    'nav.gallery': 'Galerie',
+
+    // Email Booking
+    'hero.emailCta': 'Réserver par Email',
+    'email.booking.subject': 'Demande de Réservation - Hôtel La Renaissance',
+    'email.booking.body': 'Bonjour,\n\nJ\'aimerais réserver un séjour à l\'Hôtel La Renaissance.\n\nPouvez-vous m\'envoyer les détails et les tarifs disponibles?\n\nMerci,',
 
     // About Modal
     'modal.about.title': 'À Propos',
@@ -103,50 +102,47 @@ const translations = {
     // WhatsApp Messages
     'whatsapp.booking': 'Bonjour, j\'aimerais réserver un séjour à l\'Hôtel La Renaissance.',
     'whatsapp.room': 'Bonjour, j\'aimerais réserver une chambre à l\'Hôtel La Renaissance.',
+    'whatsapp.tour': 'Bonjour TATA EXPLORE, j\'aimerais planifier une aventure touristique.',
   },
-
   ar: {
-    // Header & Navigation
-    'header.home': 'الرئيسية',
-    'header.rooms': 'الغرف والأجنحة',
-    'header.restaurant': 'المطعم',
-    'header.tours': 'وكالة السياحة',
-    'header.gallery': 'المعرض',
-    'header.contact': 'تواصل معنا',
+    // Navigation
+    'nav.home': 'الرئيسية',
+    'nav.rooms': 'الغرف والأجنحة',
+    'nav.restaurant': 'المطعم',
+    'nav.tours': 'وكالة السياحة',
+    'nav.gallery': 'المعرض',
+    'nav.book': 'احجز إقامتك',
 
-    // Hero Section
-    'hero.title': 'مرحباً بك في فندق لا رينيسانس',
-    'hero.subtitle': 'الضيافة المغربية الأصيلة في قلب طاطا',
-    'hero.cta': 'احجز إقامتك عبر واتس أب',
-    'hero.emailCta': 'احجز عبر البريد الإلكتروني',
-    'email.booking.subject': 'طلب حجز - فندق رينيسانس',
-    'email.booking.body': 'السلام عليكم،\n\nأود حجز إقامة في فندق رينيسانس.\n\nهل يمكنك إرسال التفاصيل والأسعار المتاحة؟\n\nشكراً،',
+    // Hero
+    'hero.title': 'مرحبا بك في فندق رينيسانس',
+    'hero.subtitle': 'الضيافة المغربية الأصيلة في قلب تاتا',
+    'hero.cta': 'احجز إقامتك عبر واتساب',
 
-    // Rooms Section
+    // Rooms
     'rooms.title': 'غرفنا',
-    'rooms.subtitle': 'الراحة والأناقة لإقامتك',
-    'rooms.amenities': 'المرافق',
+    'rooms.double': 'غرفة مزدوجة',
+    'rooms.double.desc': 'الراحة والأناقة لشخصين',
+    'rooms.suite': 'جناح',
+    'rooms.suite.desc': 'مساحة فاخرة والمرافق',
+    'rooms.family': 'غرفة عائلية',
+    'rooms.family.desc': 'مساحة مضيئة والمرافق',
     'rooms.viewDetails': 'عرض التفاصيل',
 
-    // Tours Section
-    'tours.title': 'وكالة السياحة - تاتا إكسبلور',
-    'tours.subtitle': 'اكتشف عجائب المنطقة',
-    'tours.cta': 'احجز تجربة سياحية',
-    'tours.planAdventure': 'خطط للمغامرة',
+    // Tours
+    'tours.title': 'اكتشف الجواهر الخفية في تاتا مع وكالة السياحة لدينا',
+    'tours.historical': 'المواقع التاريخية',
+    'tours.desert': 'رحلات الصحراء',
+    'tours.cultural': 'التجارب الثقافية',
+    'tours.planAdventure': 'خطط لمغامرتك',
 
-    // Testimonials Section
-    'testimonials.title': 'آراء ضيوفنا',
-    'testimonials.subtitle': 'تجارب لا تُنسى',
+    // Testimonials
+    'testimonials.title': 'ما يقوله ضيوفنا',
 
-    // Gallery Section
-    'gallery.title': 'المعرض',
-    'gallery.subtitle': 'استكشف منشأتنا',
+    // Location
+    'location.title': 'موقعنا',
+    'location.getDirections': 'احصل على الاتجاهات',
 
-    // Location Section
-    'location.title': 'الموقع',
-    'location.getDirections': 'احصل على التوجيهات',
-
-    // Contact Section
+    // Contact
     'contact.title': 'تواصل معنا',
     'contact.name': 'الاسم',
     'contact.email': 'البريد الإلكتروني',
@@ -156,24 +152,24 @@ const translations = {
     'contact.address': 'العنوان',
 
     // Footer
-    'footer.rooms': 'الغرف والأجنحة',
+    'footer.about': 'حول',
+    'footer.rooms': 'الغرف',
     'footer.restaurant': 'المطعم',
     'footer.tours': 'الرحلات',
     'footer.gallery': 'المعرض',
     'footer.contact': 'تواصل',
     'footer.privacy': 'سياسة الخصوصية',
     'footer.terms': 'شروط الاستخدام',
-    'footer.copyright': '© 2024 فندق لا رينيسانس. جميع الحقوق محفوظة.',
+    'footer.copyright': '© 2024 فندق رينيسانس. جميع الحقوق محفوظة.',
 
     // Common
     'common.learnMore': 'اعرف المزيد',
     'common.bookNow': 'احجز الآن',
-    'nav.book': 'احجز',
-    'nav.home': 'الرئيسية',
-    'nav.rooms': 'الغرف والأجنحة',
-    'nav.restaurant': 'المطعم',
-    'nav.tours': 'وكالة السياحة',
-    'nav.gallery': 'المعرض',
+
+    // Email Booking
+    'hero.emailCta': 'احجز عبر البريد الإلكتروني',
+    'email.booking.subject': 'طلب حجز - فندق رينيسانس',
+    'email.booking.body': 'السلام عليكم،\n\nأود حجز إقامة في فندق رينيسانس.\n\nهل يمكنك إرسال التفاصيل والأسعار المتاحة؟\n\nشكراً،',
 
     // About Modal
     'modal.about.title': 'حول',
@@ -199,51 +195,48 @@ const translations = {
     // WhatsApp Messages
     'whatsapp.booking': 'السلام عليكم، أود حجز إقامة في فندق رينيسانس.',
     'whatsapp.room': 'السلام عليكم، أود حجز غرفة في فندق رينيسانس.',
+    'whatsapp.tour': 'السلام عليكم، أود التخطيط لرحلة سياحية مع تاتا إكسبلور.',
   },
-
   en: {
-    // Header & Navigation
-    'header.home': 'Home',
-    'header.rooms': 'Rooms & Suites',
-    'header.restaurant': 'Restaurant',
-    'header.tours': 'Tour Agency',
-    'header.gallery': 'Gallery',
-    'header.contact': 'Contact',
+    // Navigation
+    'nav.home': 'Home',
+    'nav.rooms': 'Rooms & Suites',
+    'nav.restaurant': 'Restaurant',
+    'nav.tours': 'Tours Agency',
+    'nav.gallery': 'Gallery',
+    'nav.book': 'Book Your Stay',
 
-    // Hero Section
+    // Hero
     'hero.title': 'Welcome to Hotel La Renaissance',
-    'hero.subtitle': 'Authentic Moroccan Hospitality in the Heart of Tata',
+    'hero.subtitle': 'Authentic Moroccan Hospitality in The Heart of Tata',
     'hero.cta': 'Book Your Stay via WhatsApp',
-    'hero.emailCta': 'Book by Email',
-    'email.booking.subject': 'Booking Request - Hotel La Renaissance',
-    'email.booking.body': 'Hello,\n\nI would like to book a stay at Hotel La Renaissance.\n\nCould you please send me the available details and rates?\n\nThank you,',
 
-    // Rooms Section
+    // Rooms
     'rooms.title': 'Our Rooms',
-    'rooms.subtitle': 'Comfort and Elegance for Your Stay',
-    'rooms.amenities': 'Amenities',
+    'rooms.double': 'Double Room',
+    'rooms.double.desc': 'Comfort & Style for Two',
+    'rooms.suite': 'Suite',
+    'rooms.suite.desc': 'Luxurious Space & Amenities',
+    'rooms.family': 'Family Room',
+    'rooms.family.desc': 'Luminous Space & Amenities',
     'rooms.viewDetails': 'View Details',
 
-    // Tours Section
-    'tours.title': 'Tour Agency - TATA EXPLORE',
-    'tours.subtitle': 'Discover the Wonders of the Region',
-    'tours.cta': 'Book an Experience',
+    // Tours
+    'tours.title': 'Discover Tata\'s Hidden Gems with Our Tour Agency',
+    'tours.historical': 'Historical Sites',
+    'tours.desert': 'Desert Treks',
+    'tours.cultural': 'Cultural Experiences',
     'tours.planAdventure': 'Plan Your Adventure',
 
-    // Testimonials Section
+    // Testimonials
     'testimonials.title': 'What Our Guests Say',
-    'testimonials.subtitle': 'Unforgettable Experiences',
 
-    // Gallery Section
-    'gallery.title': 'Gallery',
-    'gallery.subtitle': 'Explore Our Establishment',
-
-    // Location Section
-    'location.title': 'Location',
+    // Location
+    'location.title': 'Our Location',
     'location.getDirections': 'Get Directions',
 
-    // Contact Section
-    'contact.title': 'Contact Us',
+    // Contact
+    'contact.title': 'Get in Touch',
     'contact.name': 'Name',
     'contact.email': 'Email',
     'contact.message': 'Message',
@@ -252,7 +245,8 @@ const translations = {
     'contact.address': 'Address',
 
     // Footer
-    'footer.rooms': 'Rooms & Suites',
+    'footer.about': 'About',
+    'footer.rooms': 'Rooms',
     'footer.restaurant': 'Restaurant',
     'footer.tours': 'Tours',
     'footer.gallery': 'Gallery',
@@ -264,12 +258,11 @@ const translations = {
     // Common
     'common.learnMore': 'Learn More',
     'common.bookNow': 'Book Now',
-    'nav.book': 'Book',
-    'nav.home': 'Home',
-    'nav.rooms': 'Rooms & Suites',
-    'nav.restaurant': 'Restaurant',
-    'nav.tours': 'Tour Agency',
-    'nav.gallery': 'Gallery',
+
+    // Email Booking
+    'hero.emailCta': 'Book by Email',
+    'email.booking.subject': 'Booking Request - Hotel La Renaissance',
+    'email.booking.body': 'Hello,\n\nI would like to book a stay at Hotel La Renaissance.\n\nCould you please send me the available details and rates?\n\nThank you,',
 
     // About Modal
     'modal.about.title': 'About',
@@ -295,59 +288,58 @@ const translations = {
     // WhatsApp Messages
     'whatsapp.booking': 'Hello, I would like to book a stay at Hotel La Renaissance.',
     'whatsapp.room': 'Hello, I would like to book a room at Hotel La Renaissance.',
+    'whatsapp.tour': 'Hello TATA EXPLORE, I would like to plan an adventure tour.',
   },
-
   es: {
-    // Header & Navigation
-    'header.home': 'Inicio',
-    'header.rooms': 'Habitaciones y Suites',
-    'header.restaurant': 'Restaurante',
-    'header.tours': 'Agencia de Viajes',
-    'header.gallery': 'Galería',
-    'header.contact': 'Contacto',
+    // Navigation
+    'nav.home': 'Inicio',
+    'nav.rooms': 'Habitaciones y Suites',
+    'nav.restaurant': 'Restaurante',
+    'nav.tours': 'Agencia de Viajes',
+    'nav.gallery': 'Galería',
+    'nav.book': 'Reserva Tu Estancia',
 
-    // Hero Section
+    // Hero
     'hero.title': 'Bienvenido al Hotel La Renaissance',
-    'hero.subtitle': 'Hospitalidad Marroquí Auténtica en el Corazón de Tata',
+    'hero.subtitle': 'Auténtica Hospitalidad Marroquí en el Corazón de Tata',
     'hero.cta': 'Reserva Tu Estancia por WhatsApp',
-    'hero.emailCta': 'Reservar por Email',
-    'email.booking.subject': 'Solicitud de Reserva - Hotel La Renaissance',
-    'email.booking.body': 'Hola,\n\nMe gustaría reservar una estancia en el Hotel La Renaissance.\n\n¿Podrías enviarme los detalles y las tarifas disponibles?\n\nGracias,',
 
-    // Rooms Section
+    // Rooms
     'rooms.title': 'Nuestras Habitaciones',
-    'rooms.subtitle': 'Comodidad y Elegancia para tu Estadía',
-    'rooms.amenities': 'Comodidades',
+    'rooms.double': 'Habitación Doble',
+    'rooms.double.desc': 'Comodidad y Estilo para Dos',
+    'rooms.suite': 'Suite',
+    'rooms.suite.desc': 'Espacio Lujoso y Comodidades',
+    'rooms.family': 'Habitación Familiar',
+    'rooms.family.desc': 'Espacio Luminoso y Comodidades',
     'rooms.viewDetails': 'Ver Detalles',
-    // Tours Section
-    'tours.title': 'Agencia de Viajes - TATA EXPLORE',
-    'tours.subtitle': 'Descubre las Maravillas de la Región',
-    'tours.cta': 'Reserva una Experiencia',
-    'tours.planAdventure': 'Planifica tu Aventura',
 
-    // Testimonials Section
+    // Tours
+    'tours.title': 'Descubre las Joyas Ocultas de Tata con Nuestra Agencia de Viajes',
+    'tours.historical': 'Sitios Históricos',
+    'tours.desert': 'Treks en el Desierto',
+    'tours.cultural': 'Experiencias Culturales',
+    'tours.planAdventure': 'Planifica Tu Aventura',
+
+    // Testimonials
     'testimonials.title': 'Lo Que Dicen Nuestros Huéspedes',
-    'testimonials.subtitle': 'Experiencias Inolvidables',
 
-    // Gallery Section
-    'gallery.title': 'Galería',
-    'gallery.subtitle': 'Explora Nuestro Establecimiento',
-
-    // Location Section
-    'location.title': 'Ubicación',
+    // Location
+    'location.title': 'Nuestra Ubicación',
     'location.getDirections': 'Obtener Direcciones',
 
-    // Contact Section
-    'contact.title': 'Contáctanos',
+    // Contact
+    'contact.title': 'Ponte en Contacto',
     'contact.name': 'Nombre',
-    'contact.email': 'Email',
+    'contact.email': 'Correo Electrónico',
     'contact.message': 'Mensaje',
     'contact.send': 'Enviar Mensaje',
     'contact.phone': 'Teléfono',
     'contact.address': 'Dirección',
 
     // Footer
-    'footer.rooms': 'Habitaciones y Suites',
+    'footer.about': 'Acerca de',
+    'footer.rooms': 'Habitaciones',
     'footer.restaurant': 'Restaurante',
     'footer.tours': 'Viajes',
     'footer.gallery': 'Galería',
@@ -359,12 +351,11 @@ const translations = {
     // Common
     'common.learnMore': 'Más Información',
     'common.bookNow': 'Reservar Ahora',
-    'nav.book': 'Reservar',
-    'nav.home': 'Inicio',
-    'nav.rooms': 'Habitaciones y Suites',
-    'nav.restaurant': 'Restaurante',
-    'nav.tours': 'Agencia de Viajes',
-    'nav.gallery': 'Galería',
+
+    // Email Booking
+    'hero.emailCta': 'Reservar por Email',
+    'email.booking.subject': 'Solicitud de Reserva - Hotel La Renaissance',
+    'email.booking.body': 'Hola,\n\nMe gustaría reservar una estancia en el Hotel La Renaissance.\n\n¿Podrías enviarme los detalles y las tarifas disponibles?\n\nGracias,',
 
     // About Modal
     'modal.about.title': 'Acerca de',
@@ -390,50 +381,47 @@ const translations = {
     // WhatsApp Messages
     'whatsapp.booking': 'Hola, me gustaría reservar una estancia en el Hotel La Renaissance.',
     'whatsapp.room': 'Hola, me gustaría reservar una habitación en el Hotel La Renaissance.',
+    'whatsapp.tour': 'Hola TATA EXPLORE, me gustaría planificar un tour de aventura.',
   },
-
   it: {
-    // Header & Navigation
-    'header.home': 'Home',
-    'header.rooms': 'Camere e Suite',
-    'header.restaurant': 'Ristorante',
-    'header.tours': 'Agenzia Turistica',
-    'header.gallery': 'Galleria',
-    'header.contact': 'Contatti',
+    // Navigation
+    'nav.home': 'Home',
+    'nav.rooms': 'Camere e Suite',
+    'nav.restaurant': 'Ristorante',
+    'nav.tours': 'Agenzia Turistica',
+    'nav.gallery': 'Galleria',
+    'nav.book': 'Prenota il Tuo Soggiorno',
 
-    // Hero Section
+    // Hero
     'hero.title': 'Benvenuto all\'Hotel La Renaissance',
-    'hero.subtitle': 'Ospitalità Marocchina Autentica nel Cuore di Tata',
+    'hero.subtitle': 'Autentica Ospitalità Marocchina nel Cuore di Tata',
     'hero.cta': 'Prenota il Tuo Soggiorno via WhatsApp',
-    'hero.emailCta': 'Prenota per Email',
-    'email.booking.subject': 'Richiesta di Prenotazione - Hotel La Renaissance',
-    'email.booking.body': 'Ciao,\n\nMi piacerebbe prenotare un soggiorno all\'Hotel La Renaissance.\n\nPotresti inviarmi i dettagli e le tariffe disponibili?\n\nGrazie,',
 
-    // Rooms Section
+    // Rooms
     'rooms.title': 'Le Nostre Camere',
-    'rooms.subtitle': 'Comfort ed Eleganza per il Tuo Soggiorno',
-    'rooms.amenities': 'Servizi',
+    'rooms.double': 'Camera Doppia',
+    'rooms.double.desc': 'Comfort e Stile per Due',
+    'rooms.suite': 'Suite',
+    'rooms.suite.desc': 'Spazio Lussuoso e Servizi',
+    'rooms.family': 'Camera Familiare',
+    'rooms.family.desc': 'Spazio Luminoso e Servizi',
     'rooms.viewDetails': 'Visualizza Dettagli',
 
-    // Tours Section
-    'tours.title': 'Agenzia Turistica - TATA EXPLORE',
-    'tours.subtitle': 'Scopri le Meraviglie della Regione',
-    'tours.cta': 'Prenota un\'Esperienza',
+    // Tours
+    'tours.title': 'Scopri i Gioielli Nascosti di Tata con la Nostra Agenzia Turistica',
+    'tours.historical': 'Siti Storici',
+    'tours.desert': 'Trekking nel Deserto',
+    'tours.cultural': 'Esperienze Culturali',
     'tours.planAdventure': 'Pianifica la Tua Avventura',
 
-    // Testimonials Section
+    // Testimonials
     'testimonials.title': 'Cosa Dicono i Nostri Ospiti',
-    'testimonials.subtitle': 'Esperienze Indimenticabili',
 
-    // Gallery Section
-    'gallery.title': 'Galleria',
-    'gallery.subtitle': 'Esplora la Nostra Struttura',
-
-    // Location Section
-    'location.title': 'Posizione',
+    // Location
+    'location.title': 'La Nostra Posizione',
     'location.getDirections': 'Ottieni Indicazioni',
 
-    // Contact Section
+    // Contact
     'contact.title': 'Contattaci',
     'contact.name': 'Nome',
     'contact.email': 'Email',
@@ -443,7 +431,8 @@ const translations = {
     'contact.address': 'Indirizzo',
 
     // Footer
-    'footer.rooms': 'Camere e Suite',
+    'footer.about': 'Chi Siamo',
+    'footer.rooms': 'Camere',
     'footer.restaurant': 'Ristorante',
     'footer.tours': 'Viaggi',
     'footer.gallery': 'Galleria',
@@ -455,12 +444,11 @@ const translations = {
     // Common
     'common.learnMore': 'Scopri di Più',
     'common.bookNow': 'Prenota Ora',
-    'nav.book': 'Prenota',
-    'nav.home': 'Home',
-    'nav.rooms': 'Camere e Suite',
-    'nav.restaurant': 'Ristorante',
-    'nav.tours': 'Agenzia Turistica',
-    'nav.gallery': 'Galleria',
+
+    // Email Booking
+    'hero.emailCta': 'Prenota per Email',
+    'email.booking.subject': 'Richiesta di Prenotazione - Hotel La Renaissance',
+    'email.booking.body': 'Ciao,\n\nVorrei prenotare un soggiorno all\'Hotel La Renaissance.\n\nPotresti inviarmi i dettagli e le tariffe disponibili?\n\nGrazie,',
 
     // About Modal
     'modal.about.title': 'Chi Siamo',
@@ -484,16 +472,18 @@ const translations = {
     'modal.about.close': 'Chiudi',
 
     // WhatsApp Messages
-    'whatsapp.booking': 'Ciao, mi piacerebbe prenotare un soggiorno all\'Hotel La Renaissance.',
-    'whatsapp.room': 'Ciao, mi piacerebbe prenotare una camera all\'Hotel La Renaissance.',
+    'whatsapp.booking': 'Ciao, vorrei prenotare un soggiorno all\'Hotel La Renaissance.',
+    'whatsapp.room': 'Ciao, vorrei prenotare una camera all\'Hotel La Renaissance.',
+    'whatsapp.tour': 'Ciao TATA EXPLORE, vorrei pianificare un tour avventuroso.',
   },
 };
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = React.useState<'fr' | 'ar' | 'en' | 'es' | 'it'>('fr');
+export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  // French as default language
+  const [language, setLanguage] = useState<Language>('fr');
 
   const t = (key: string): string => {
-    return (translations[language] as Record<string, string>)[key] || key;
+    return translations[language][key as keyof typeof translations['fr']] || key;
   };
 
   return (
@@ -501,12 +491,12 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       {children}
     </LanguageContext.Provider>
   );
-}
+};
 
-export function useLanguage() {
+export const useLanguage = (): LanguageContextType => {
   const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error('useLanguage must be used within LanguageProvider');
+  if (context === undefined) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
   }
   return context;
-}
+};
