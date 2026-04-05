@@ -1,6 +1,15 @@
 {
+  "rewrites": [
+    {
+      "source": "/:path((?!.*\\.).*)",
+      "destination": "/index.html"
+    }
+  ],
   "buildCommand": "pnpm build",
   "outputDirectory": "dist/public",
   "framework": "vite",
-  "installCommand": "pnpm install"
+  "installCommand": "pnpm install",
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
