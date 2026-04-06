@@ -1,0 +1,12 @@
+name = "hotel-la-renaissance"
+type = "javascript"
+account_id = ""
+workers_dev = true
+
+[build]
+command = "npm run build"
+cwd = "./"
+
+[build.upload]
+format = "service-worker"
+main = "./dist/public/index.html"
